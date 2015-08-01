@@ -5,20 +5,20 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>39444CF8-91B8-4A17-B668-4285876656A7</string>
+	<string>01BC2328-17F7-4D11-A93D-FBB83A6260F6</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>新时代健身</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>F02C50662255F45A41F2D5CFC8B66DBA30522231</key>
 		<string>https://github.com/novagee/gym</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>新时代健身/新时代健身.xcodeproj/project.xcworkspace</string>
+	<string>新时代健身/新时代健身.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>F02C50662255F45A41F2D5CFC8B66DBA30522231</key>
-		<string>../../..</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/novagee/gym</string>

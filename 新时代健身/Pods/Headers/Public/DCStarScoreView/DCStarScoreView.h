@@ -1,0 +1,1 @@
+../../../DCStarScoreView/DCStarScoreView/DCStarScoreView.h

@@ -7,11 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7777AEA3E91F36CAF08DD306 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C64C3B9EB392C67AEE5BF6E /* libPods.a */; };
+		81810BBB1B6CA593008AEACD /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81810BBA1B6CA593008AEACD /* HomePageViewController.m */; };
+		81810BC01B6CA679008AEACD /* HomePageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81810BBE1B6CA679008AEACD /* HomePageCell.m */; };
+		81810BC11B6CA679008AEACD /* HomePageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81810BBF1B6CA679008AEACD /* HomePageCell.xib */; };
+		81810BC41B6CF7F0008AEACD /* SocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81810BC31B6CF7F0008AEACD /* SocialViewController.m */; };
+		81810BC91B6CF8AF008AEACD /* DCFilterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81810BC71B6CF8AF008AEACD /* DCFilterCell.m */; };
+		81810BD21B6CFC8E008AEACD /* ChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81810BD01B6CFC8E008AEACD /* ChatCell.m */; };
+		81810BD31B6CFC8E008AEACD /* ChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81810BD11B6CFC8E008AEACD /* ChatCell.xib */; };
+		81810BD91B6D000C008AEACD /* CALayer+StoryboardExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 81810BD61B6D000C008AEACD /* CALayer+StoryboardExtention.m */; };
+		81810BDA1B6D000C008AEACD /* UITableView+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 81810BD81B6D000C008AEACD /* UITableView+Extention.m */; };
+		81810BDD1B6D0371008AEACD /* ShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81810BDC1B6D0371008AEACD /* ShopViewController.m */; };
+		81810BE21B6D055E008AEACD /* ShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81810BE01B6D055E008AEACD /* ShopCell.m */; };
+		81810BE31B6D055E008AEACD /* ShopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81810BE11B6D055E008AEACD /* ShopCell.xib */; };
+		81E1DF1D1B6CA1E500CB6DA1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81E1DF1B1B6CA1E500CB6DA1 /* Images.xcassets */; };
 		9AE106191B6C9F6E00DCCA27 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE106181B6C9F6E00DCCA27 /* main.m */; };
 		9AE1061C1B6C9F6E00DCCA27 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1061B1B6C9F6E00DCCA27 /* AppDelegate.m */; };
-		9AE1061F1B6C9F6E00DCCA27 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1061E1B6C9F6E00DCCA27 /* ViewController.m */; };
 		9AE106221B6C9F6E00DCCA27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AE106201B6C9F6E00DCCA27 /* Main.storyboard */; };
-		9AE106241B6C9F6E00DCCA27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AE106231B6C9F6E00DCCA27 /* Images.xcassets */; };
 		9AE106271B6C9F6E00DCCA27 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AE106251B6C9F6E00DCCA27 /* LaunchScreen.xib */; };
 		9AE106331B6C9F6E00DCCA27 /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE106321B6C9F6E00DCCA27 /* _____Tests.m */; };
 /* End PBXBuildFile section */
@@ -27,19 +39,41 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C64C3B9EB392C67AEE5BF6E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		544B0D558D3140BDFCFE281E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		81810BB91B6CA593008AEACD /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageViewController.h; sourceTree = "<group>"; };
+		81810BBA1B6CA593008AEACD /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageViewController.m; sourceTree = "<group>"; };
+		81810BBD1B6CA679008AEACD /* HomePageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageCell.h; sourceTree = "<group>"; };
+		81810BBE1B6CA679008AEACD /* HomePageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageCell.m; sourceTree = "<group>"; };
+		81810BBF1B6CA679008AEACD /* HomePageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomePageCell.xib; sourceTree = "<group>"; };
+		81810BC21B6CF7F0008AEACD /* SocialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialViewController.h; sourceTree = "<group>"; };
+		81810BC31B6CF7F0008AEACD /* SocialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialViewController.m; sourceTree = "<group>"; };
+		81810BC61B6CF8AF008AEACD /* DCFilterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFilterCell.h; sourceTree = "<group>"; };
+		81810BC71B6CF8AF008AEACD /* DCFilterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCFilterCell.m; sourceTree = "<group>"; };
+		81810BCF1B6CFC8E008AEACD /* ChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatCell.h; sourceTree = "<group>"; };
+		81810BD01B6CFC8E008AEACD /* ChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatCell.m; sourceTree = "<group>"; };
+		81810BD11B6CFC8E008AEACD /* ChatCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatCell.xib; sourceTree = "<group>"; };
+		81810BD51B6D000C008AEACD /* CALayer+StoryboardExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+StoryboardExtention.h"; sourceTree = "<group>"; };
+		81810BD61B6D000C008AEACD /* CALayer+StoryboardExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+StoryboardExtention.m"; sourceTree = "<group>"; };
+		81810BD71B6D000C008AEACD /* UITableView+Extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Extention.h"; sourceTree = "<group>"; };
+		81810BD81B6D000C008AEACD /* UITableView+Extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Extention.m"; sourceTree = "<group>"; };
+		81810BDB1B6D0371008AEACD /* ShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopViewController.h; sourceTree = "<group>"; };
+		81810BDC1B6D0371008AEACD /* ShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopViewController.m; sourceTree = "<group>"; };
+		81810BDF1B6D055E008AEACD /* ShopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopCell.h; sourceTree = "<group>"; };
+		81810BE01B6D055E008AEACD /* ShopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopCell.m; sourceTree = "<group>"; };
+		81810BE11B6D055E008AEACD /* ShopCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopCell.xib; sourceTree = "<group>"; };
+		81E1DF1B1B6CA1E500CB6DA1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9AE106131B6C9F6E00DCCA27 /* 新时代健身.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "新时代健身.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE106171B6C9F6E00DCCA27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AE106181B6C9F6E00DCCA27 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9AE1061A1B6C9F6E00DCCA27 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9AE1061B1B6C9F6E00DCCA27 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9AE1061D1B6C9F6E00DCCA27 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9AE1061E1B6C9F6E00DCCA27 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9AE106211B6C9F6E00DCCA27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9AE106231B6C9F6E00DCCA27 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9AE106261B6C9F6E00DCCA27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		9AE1062C1B6C9F6E00DCCA27 /* 新时代健身Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "新时代健身Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE106311B6C9F6E00DCCA27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AE106321B6C9F6E00DCCA27 /* _____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_____Tests.m"; sourceTree = "<group>"; };
+		D8B082E54C168C692016206A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7777AEA3E91F36CAF08DD306 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +95,161 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29DB7DC1674D799D3AD9DB24 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C64C3B9EB392C67AEE5BF6E /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6A0B6234E43F83A59E818207 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				544B0D558D3140BDFCFE281E /* Pods.debug.xcconfig */,
+				D8B082E54C168C692016206A /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		81810BBC1B6CA656008AEACD /* HomePageCell */ = {
+			isa = PBXGroup;
+			children = (
+				81810BBD1B6CA679008AEACD /* HomePageCell.h */,
+				81810BBE1B6CA679008AEACD /* HomePageCell.m */,
+				81810BBF1B6CA679008AEACD /* HomePageCell.xib */,
+			);
+			path = HomePageCell;
+			sourceTree = "<group>";
+		};
+		81810BC51B6CF8AF008AEACD /* DCFilterCell */ = {
+			isa = PBXGroup;
+			children = (
+				81810BC61B6CF8AF008AEACD /* DCFilterCell.h */,
+				81810BC71B6CF8AF008AEACD /* DCFilterCell.m */,
+			);
+			path = DCFilterCell;
+			sourceTree = "<group>";
+		};
+		81810BCB1B6CFC29008AEACD /* ChatCell */ = {
+			isa = PBXGroup;
+			children = (
+				81810BCF1B6CFC8E008AEACD /* ChatCell.h */,
+				81810BD01B6CFC8E008AEACD /* ChatCell.m */,
+				81810BD11B6CFC8E008AEACD /* ChatCell.xib */,
+			);
+			path = ChatCell;
+			sourceTree = "<group>";
+		};
+		81810BD41B6D000C008AEACD /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				81810BD51B6D000C008AEACD /* CALayer+StoryboardExtention.h */,
+				81810BD61B6D000C008AEACD /* CALayer+StoryboardExtention.m */,
+				81810BD71B6D000C008AEACD /* UITableView+Extention.h */,
+				81810BD81B6D000C008AEACD /* UITableView+Extention.m */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		81810BDE1B6D0538008AEACD /* ShopCell */ = {
+			isa = PBXGroup;
+			children = (
+				81810BDF1B6D055E008AEACD /* ShopCell.h */,
+				81810BE01B6D055E008AEACD /* ShopCell.m */,
+				81810BE11B6D055E008AEACD /* ShopCell.xib */,
+			);
+			path = ShopCell;
+			sourceTree = "<group>";
+		};
+		81E1DF171B6CA1E500CB6DA1 /* Gym-Main */ = {
+			isa = PBXGroup;
+			children = (
+				81E1DF1E1B6CA35600CB6DA1 /* Gym-Booking */,
+				81E1DF1F1B6CA35600CB6DA1 /* Gym-HomePage */,
+				81E1DF201B6CA35600CB6DA1 /* Gym-NearShop */,
+				81E1DF211B6CA35600CB6DA1 /* Gym-Social */,
+			);
+			path = "Gym-Main";
+			sourceTree = "<group>";
+		};
+		81E1DF181B6CA1E500CB6DA1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		81E1DF191B6CA1E500CB6DA1 /* Networks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networks;
+			sourceTree = "<group>";
+		};
+		81E1DF1A1B6CA1E500CB6DA1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				81E1DF1B1B6CA1E500CB6DA1 /* Images.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		81E1DF1C1B6CA1E500CB6DA1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9AE106201B6C9F6E00DCCA27 /* Main.storyboard */,
+				9AE106251B6C9F6E00DCCA27 /* LaunchScreen.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		81E1DF1E1B6CA35600CB6DA1 /* Gym-Booking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Gym-Booking";
+			sourceTree = "<group>";
+		};
+		81E1DF1F1B6CA35600CB6DA1 /* Gym-HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				81810BB91B6CA593008AEACD /* HomePageViewController.h */,
+				81810BBA1B6CA593008AEACD /* HomePageViewController.m */,
+				81810BBC1B6CA656008AEACD /* HomePageCell */,
+			);
+			path = "Gym-HomePage";
+			sourceTree = "<group>";
+		};
+		81E1DF201B6CA35600CB6DA1 /* Gym-NearShop */ = {
+			isa = PBXGroup;
+			children = (
+				81810BDB1B6D0371008AEACD /* ShopViewController.h */,
+				81810BDC1B6D0371008AEACD /* ShopViewController.m */,
+				81810BDE1B6D0538008AEACD /* ShopCell */,
+			);
+			path = "Gym-NearShop";
+			sourceTree = "<group>";
+		};
+		81E1DF211B6CA35600CB6DA1 /* Gym-Social */ = {
+			isa = PBXGroup;
+			children = (
+				81810BC21B6CF7F0008AEACD /* SocialViewController.h */,
+				81810BC31B6CF7F0008AEACD /* SocialViewController.m */,
+				81810BC51B6CF8AF008AEACD /* DCFilterCell */,
+				81810BCB1B6CFC29008AEACD /* ChatCell */,
+			);
+			path = "Gym-Social";
+			sourceTree = "<group>";
+		};
 		9AE1060A1B6C9F6E00DCCA27 = {
 			isa = PBXGroup;
 			children = (
 				9AE106151B6C9F6E00DCCA27 /* 新时代健身 */,
 				9AE1062F1B6C9F6E00DCCA27 /* 新时代健身Tests */,
 				9AE106141B6C9F6E00DCCA27 /* Products */,
+				6A0B6234E43F83A59E818207 /* Pods */,
+				29DB7DC1674D799D3AD9DB24 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,11 +267,12 @@
 			children = (
 				9AE1061A1B6C9F6E00DCCA27 /* AppDelegate.h */,
 				9AE1061B1B6C9F6E00DCCA27 /* AppDelegate.m */,
-				9AE1061D1B6C9F6E00DCCA27 /* ViewController.h */,
-				9AE1061E1B6C9F6E00DCCA27 /* ViewController.m */,
-				9AE106201B6C9F6E00DCCA27 /* Main.storyboard */,
-				9AE106231B6C9F6E00DCCA27 /* Images.xcassets */,
-				9AE106251B6C9F6E00DCCA27 /* LaunchScreen.xib */,
+				81E1DF171B6CA1E500CB6DA1 /* Gym-Main */,
+				81E1DF181B6CA1E500CB6DA1 /* Model */,
+				81E1DF191B6CA1E500CB6DA1 /* Networks */,
+				81E1DF1A1B6CA1E500CB6DA1 /* Resources */,
+				81E1DF1C1B6CA1E500CB6DA1 /* View */,
+				81810BD41B6D000C008AEACD /* Utilities */,
 				9AE106161B6C9F6E00DCCA27 /* Supporting Files */,
 			);
 			path = "新时代健身";
@@ -126,9 +311,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9AE106361B6C9F6E00DCCA27 /* Build configuration list for PBXNativeTarget "新时代健身" */;
 			buildPhases = (
+				9416C4C6437575B15DEFCC3E /* Check Pods Manifest.lock */,
 				9AE1060F1B6C9F6E00DCCA27 /* Sources */,
 				9AE106101B6C9F6E00DCCA27 /* Frameworks */,
 				9AE106111B6C9F6E00DCCA27 /* Resources */,
+				F0A99B532051F032C2169F34 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -200,8 +387,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AE106221B6C9F6E00DCCA27 /* Main.storyboard in Resources */,
+				81E1DF1D1B6CA1E500CB6DA1 /* Images.xcassets in Resources */,
+				81810BD31B6CFC8E008AEACD /* ChatCell.xib in Resources */,
 				9AE106271B6C9F6E00DCCA27 /* LaunchScreen.xib in Resources */,
-				9AE106241B6C9F6E00DCCA27 /* Images.xcassets in Resources */,
+				81810BC11B6CA679008AEACD /* HomePageCell.xib in Resources */,
+				81810BE31B6D055E008AEACD /* ShopCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,14 +404,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9416C4C6437575B15DEFCC3E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F0A99B532051F032C2169F34 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9AE1060F1B6C9F6E00DCCA27 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AE1061F1B6C9F6E00DCCA27 /* ViewController.m in Sources */,
+				81810BC91B6CF8AF008AEACD /* DCFilterCell.m in Sources */,
+				81810BD21B6CFC8E008AEACD /* ChatCell.m in Sources */,
+				81810BE21B6D055E008AEACD /* ShopCell.m in Sources */,
 				9AE1061C1B6C9F6E00DCCA27 /* AppDelegate.m in Sources */,
+				81810BD91B6D000C008AEACD /* CALayer+StoryboardExtention.m in Sources */,
 				9AE106191B6C9F6E00DCCA27 /* main.m in Sources */,
+				81810BC41B6CF7F0008AEACD /* SocialViewController.m in Sources */,
+				81810BBB1B6CA593008AEACD /* HomePageViewController.m in Sources */,
+				81810BC01B6CA679008AEACD /* HomePageCell.m in Sources */,
+				81810BDD1B6D0371008AEACD /* ShopViewController.m in Sources */,
+				81810BDA1B6D000C008AEACD /* UITableView+Extention.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +481,7 @@
 				9AE106211B6C9F6E00DCCA27 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		9AE106251B6C9F6E00DCCA27 /* LaunchScreen.xib */ = {
@@ -258,6 +490,7 @@
 				9AE106261B6C9F6E00DCCA27 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -347,6 +580,7 @@
 		};
 		9AE106371B6C9F6E00DCCA27 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 544B0D558D3140BDFCFE281E /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "新时代健身/Info.plist";
@@ -357,6 +591,7 @@
 		};
 		9AE106381B6C9F6E00DCCA27 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8B082E54C168C692016206A /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "新时代健身/Info.plist";
@@ -418,6 +653,7 @@
 				9AE106381B6C9F6E00DCCA27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9AE106391B6C9F6E00DCCA27 /* Build configuration list for PBXNativeTarget "新时代健身Tests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +662,7 @@
 				9AE1063B1B6C9F6E00DCCA27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

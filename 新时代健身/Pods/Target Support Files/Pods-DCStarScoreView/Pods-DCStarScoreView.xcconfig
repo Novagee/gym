@@ -1,0 +1,1 @@
+PODS_DCSTARSCOREVIEW_OTHER_LDFLAGS = -framework "Foundation" -framework "UIKit"
