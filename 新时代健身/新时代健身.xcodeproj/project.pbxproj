@@ -20,6 +20,8 @@
 		81810BDD1B6D0371008AEACD /* ShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81810BDC1B6D0371008AEACD /* ShopViewController.m */; };
 		81810BE21B6D055E008AEACD /* ShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81810BE01B6D055E008AEACD /* ShopCell.m */; };
 		81810BE31B6D055E008AEACD /* ShopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81810BE11B6D055E008AEACD /* ShopCell.xib */; };
+		81810BE91B6E61B5008AEACD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81810BE81B6E61B5008AEACD /* LoginViewController.m */; };
+		81810BEB1B6E67E6008AEACD /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81810BEA1B6E67E6008AEACD /* libc++.dylib */; };
 		81E1DF1D1B6CA1E500CB6DA1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81E1DF1B1B6CA1E500CB6DA1 /* Images.xcassets */; };
 		9AE106191B6C9F6E00DCCA27 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE106181B6C9F6E00DCCA27 /* main.m */; };
 		9AE1061C1B6C9F6E00DCCA27 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1061B1B6C9F6E00DCCA27 /* AppDelegate.m */; };
@@ -62,6 +64,9 @@
 		81810BDF1B6D055E008AEACD /* ShopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopCell.h; sourceTree = "<group>"; };
 		81810BE01B6D055E008AEACD /* ShopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopCell.m; sourceTree = "<group>"; };
 		81810BE11B6D055E008AEACD /* ShopCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopCell.xib; sourceTree = "<group>"; };
+		81810BE71B6E61B5008AEACD /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		81810BE81B6E61B5008AEACD /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		81810BEA1B6E67E6008AEACD /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		81E1DF1B1B6CA1E500CB6DA1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9AE106131B6C9F6E00DCCA27 /* 新时代健身.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "新时代健身.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE106171B6C9F6E00DCCA27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81810BEB1B6E67E6008AEACD /* libc++.dylib in Frameworks */,
 				7777AEA3E91F36CAF08DD306 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,6 +104,7 @@
 		29DB7DC1674D799D3AD9DB24 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				81810BEA1B6E67E6008AEACD /* libc++.dylib */,
 				2C64C3B9EB392C67AEE5BF6E /* libPods.a */,
 			);
 			name = Frameworks;
@@ -165,6 +172,8 @@
 		81E1DF171B6CA1E500CB6DA1 /* Gym-Main */ = {
 			isa = PBXGroup;
 			children = (
+				81810BE71B6E61B5008AEACD /* LoginViewController.h */,
+				81810BE81B6E61B5008AEACD /* LoginViewController.m */,
 				81E1DF1E1B6CA35600CB6DA1 /* Gym-Booking */,
 				81E1DF1F1B6CA35600CB6DA1 /* Gym-HomePage */,
 				81E1DF201B6CA35600CB6DA1 /* Gym-NearShop */,
@@ -450,6 +459,7 @@
 				9AE106191B6C9F6E00DCCA27 /* main.m in Sources */,
 				81810BC41B6CF7F0008AEACD /* SocialViewController.m in Sources */,
 				81810BBB1B6CA593008AEACD /* HomePageViewController.m in Sources */,
+				81810BE91B6E61B5008AEACD /* LoginViewController.m in Sources */,
 				81810BC01B6CA679008AEACD /* HomePageCell.m in Sources */,
 				81810BDD1B6D0371008AEACD /* ShopViewController.m in Sources */,
 				81810BDA1B6D000C008AEACD /* UITableView+Extention.m in Sources */,

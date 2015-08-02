@@ -23,18 +23,21 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - DCStarScoreView (1.0)
+  - iOSWeChatSdk (1.5.0)
   - YTKNetwork (0.5.0):
     - AFDownloadRequestOperation (~> 2.0)
     - AFNetworking (~> 2.0)
 
 DEPENDENCIES:
   - DCStarScoreView
+  - iOSWeChatSdk
   - YTKNetwork
 
 SPEC CHECKSUMS:
   AFDownloadRequestOperation: 748a1643423e1ddb23f2178f778087d4f0ae8ac7
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   DCStarScoreView: a9d26fc737356a6a4e183cfa5cfffb842ccbfd25
+  iOSWeChatSdk: 62be91f0231b1e0f003419b6816d83d8ff0f3e91
   YTKNetwork: 3f163c181ce5f03d52cf88f39d6757f46894280c
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.37.2
