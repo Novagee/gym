@@ -16,7 +16,7 @@
 @implementation AppDelegate
 
 static NSString *const kWeChatAppID = @"wxd930ea5d5a258f4f";
-static NSString *const kWeChatSecret = @"";
+static NSString *const kWeChatSecret = @"wxd477edab60670232";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
@@ -124,6 +124,11 @@ static NSString *const kWeChatSecret = @"";
                     // Fetch access token failed
                     //
                     
+#warning temperate work around the wechat login since we dont have wechat app id yet
+                    
+                    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+                    UIViewController *mainViewController = [storyboard instantiateViewControllerWithIdentifier:@"mainScreen"];
+                    [self.window setRootViewController:mainViewController];
                 }
                 else {
                     
