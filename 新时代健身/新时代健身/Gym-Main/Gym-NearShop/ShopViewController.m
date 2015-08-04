@@ -7,6 +7,7 @@
 //
 
 #import "ShopViewController.h"
+#import "ShopDetailViewController.h"
 
 #import "DCFilterCell.h"
 #import "ShopCell.h"
@@ -87,7 +88,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    ShopDetailViewController *shopDetailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"shopDetailView"];
     
+    [self.navigationController pushViewController:shopDetailViewController animated:YES];
     
 }
 

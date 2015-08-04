@@ -1,22 +1,17 @@
 //
-//  HomePageCell.m
+//  ActivityButtonCell.m
 //  
 //
-//  Created by Paul on 8/1/15.
+//  Created by Paul on 8/4/15.
 //
 //
 
-#import "HomePageCell.h"
+#import "ActivityButtonCell.h"
 
-@interface HomePageCell ()
-
-@end
-
-@implementation HomePageCell
+@implementation ActivityButtonCell
 
 - (void)awakeFromNib {
     // Initialization code
-    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -37,14 +32,6 @@
     
 }
 
-- (IBAction)bookingButtonTouchUpInside:(id)sender {
 
-    if (_delegate && [_delegate respondsToSelector:@selector(homePageCellOrderButtonTapped:)]) {
-        
-        [_delegate homePageCellOrderButtonTapped:self];
-        
-    }
-    
-}
 
 @end

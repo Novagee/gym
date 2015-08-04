@@ -22,6 +22,24 @@
 		81810BE31B6D055E008AEACD /* ShopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81810BE11B6D055E008AEACD /* ShopCell.xib */; };
 		81810BE91B6E61B5008AEACD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81810BE81B6E61B5008AEACD /* LoginViewController.m */; };
 		81810BEB1B6E67E6008AEACD /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81810BEA1B6E67E6008AEACD /* libc++.dylib */; };
+		81810BF11B6F62E1008AEACD /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81810BF01B6F62E1008AEACD /* ActivityViewController.m */; };
+		81810C031B6F7D6C008AEACD /* ActivityDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81810C011B6F7D6C008AEACD /* ActivityDetailCell.m */; };
+		81810C041B6F7D6C008AEACD /* ActivityDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81810C021B6F7D6C008AEACD /* ActivityDetailCell.xib */; };
+		81810C081B6F7D9F008AEACD /* ActivityHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81810C061B6F7D9F008AEACD /* ActivityHeaderCell.m */; };
+		81810C091B6F7D9F008AEACD /* ActivityHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81810C071B6F7D9F008AEACD /* ActivityHeaderCell.xib */; };
+		81810C0E1B70C680008AEACD /* ActivityDefaultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81810C0C1B70C680008AEACD /* ActivityDefaultCell.m */; };
+		81810C0F1B70C680008AEACD /* ActivityDefaultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81810C0D1B70C680008AEACD /* ActivityDefaultCell.xib */; };
+		81810C141B70EF75008AEACD /* ActivityButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81810C121B70EF75008AEACD /* ActivityButtonCell.m */; };
+		81810C151B70EF75008AEACD /* ActivityButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81810C131B70EF75008AEACD /* ActivityButtonCell.xib */; };
+		81810C1D1B70FFA1008AEACD /* ShopDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81810C1C1B70FFA1008AEACD /* ShopDetailViewController.m */; };
+		81810C231B71000B008AEACD /* ShopHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81810C211B71000B008AEACD /* ShopHeaderCell.m */; };
+		81810C241B71000B008AEACD /* ShopHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81810C221B71000B008AEACD /* ShopHeaderCell.xib */; };
+		81810C281B71002A008AEACD /* ShopActivityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81810C261B71002A008AEACD /* ShopActivityCell.m */; };
+		81810C291B71002A008AEACD /* ShopActivityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81810C271B71002A008AEACD /* ShopActivityCell.xib */; };
+		81810C2E1B710351008AEACD /* ShopLocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81810C2C1B710351008AEACD /* ShopLocationCell.m */; };
+		81810C2F1B710351008AEACD /* ShopLocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81810C2D1B710351008AEACD /* ShopLocationCell.xib */; };
+		81810C321B71170C008AEACD /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81810C311B71170C008AEACD /* RegisterViewController.m */; };
+		81810C351B7117F5008AEACD /* ConfirmPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81810C341B7117F5008AEACD /* ConfirmPasswordViewController.m */; };
 		81E1DF1D1B6CA1E500CB6DA1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81E1DF1B1B6CA1E500CB6DA1 /* Images.xcassets */; };
 		9AE106191B6C9F6E00DCCA27 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE106181B6C9F6E00DCCA27 /* main.m */; };
 		9AE1061C1B6C9F6E00DCCA27 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1061B1B6C9F6E00DCCA27 /* AppDelegate.m */; };
@@ -67,6 +85,35 @@
 		81810BE71B6E61B5008AEACD /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		81810BE81B6E61B5008AEACD /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		81810BEA1B6E67E6008AEACD /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		81810BEF1B6F62E1008AEACD /* ActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityViewController.h; sourceTree = "<group>"; };
+		81810BF01B6F62E1008AEACD /* ActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityViewController.m; sourceTree = "<group>"; };
+		81810C001B6F7D6C008AEACD /* ActivityDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityDetailCell.h; sourceTree = "<group>"; };
+		81810C011B6F7D6C008AEACD /* ActivityDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityDetailCell.m; sourceTree = "<group>"; };
+		81810C021B6F7D6C008AEACD /* ActivityDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityDetailCell.xib; sourceTree = "<group>"; };
+		81810C051B6F7D9F008AEACD /* ActivityHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityHeaderCell.h; sourceTree = "<group>"; };
+		81810C061B6F7D9F008AEACD /* ActivityHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityHeaderCell.m; sourceTree = "<group>"; };
+		81810C071B6F7D9F008AEACD /* ActivityHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityHeaderCell.xib; sourceTree = "<group>"; };
+		81810C0B1B70C680008AEACD /* ActivityDefaultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityDefaultCell.h; sourceTree = "<group>"; };
+		81810C0C1B70C680008AEACD /* ActivityDefaultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityDefaultCell.m; sourceTree = "<group>"; };
+		81810C0D1B70C680008AEACD /* ActivityDefaultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityDefaultCell.xib; sourceTree = "<group>"; };
+		81810C111B70EF75008AEACD /* ActivityButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityButtonCell.h; sourceTree = "<group>"; };
+		81810C121B70EF75008AEACD /* ActivityButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityButtonCell.m; sourceTree = "<group>"; };
+		81810C131B70EF75008AEACD /* ActivityButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityButtonCell.xib; sourceTree = "<group>"; };
+		81810C1B1B70FFA1008AEACD /* ShopDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopDetailViewController.h; sourceTree = "<group>"; };
+		81810C1C1B70FFA1008AEACD /* ShopDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopDetailViewController.m; sourceTree = "<group>"; };
+		81810C201B71000B008AEACD /* ShopHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopHeaderCell.h; sourceTree = "<group>"; };
+		81810C211B71000B008AEACD /* ShopHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopHeaderCell.m; sourceTree = "<group>"; };
+		81810C221B71000B008AEACD /* ShopHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopHeaderCell.xib; sourceTree = "<group>"; };
+		81810C251B71002A008AEACD /* ShopActivityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopActivityCell.h; sourceTree = "<group>"; };
+		81810C261B71002A008AEACD /* ShopActivityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopActivityCell.m; sourceTree = "<group>"; };
+		81810C271B71002A008AEACD /* ShopActivityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopActivityCell.xib; sourceTree = "<group>"; };
+		81810C2B1B710351008AEACD /* ShopLocationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopLocationCell.h; sourceTree = "<group>"; };
+		81810C2C1B710351008AEACD /* ShopLocationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopLocationCell.m; sourceTree = "<group>"; };
+		81810C2D1B710351008AEACD /* ShopLocationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopLocationCell.xib; sourceTree = "<group>"; };
+		81810C301B71170C008AEACD /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		81810C311B71170C008AEACD /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		81810C331B7117F5008AEACD /* ConfirmPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmPasswordViewController.h; sourceTree = "<group>"; };
+		81810C341B7117F5008AEACD /* ConfirmPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmPasswordViewController.m; sourceTree = "<group>"; };
 		81E1DF1B1B6CA1E500CB6DA1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9AE106131B6C9F6E00DCCA27 /* 新时代健身.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "新时代健身.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE106171B6C9F6E00DCCA27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -169,11 +216,110 @@
 			path = ShopCell;
 			sourceTree = "<group>";
 		};
+		81810BEE1B6F62C5008AEACD /* HomePage-Activity */ = {
+			isa = PBXGroup;
+			children = (
+				81810BEF1B6F62E1008AEACD /* ActivityViewController.h */,
+				81810BF01B6F62E1008AEACD /* ActivityViewController.m */,
+				81810C101B70EF50008AEACD /* ActivityButtonCell */,
+				81810C0A1B70C655008AEACD /* ActivityDefaultCell */,
+				81810BFF1B6F7D6C008AEACD /* ActivityDetailCell */,
+				81810BFE1B6F7D5A008AEACD /* ActivityHeaderCell */,
+			);
+			path = "HomePage-Activity";
+			sourceTree = "<group>";
+		};
+		81810BFE1B6F7D5A008AEACD /* ActivityHeaderCell */ = {
+			isa = PBXGroup;
+			children = (
+				81810C051B6F7D9F008AEACD /* ActivityHeaderCell.h */,
+				81810C061B6F7D9F008AEACD /* ActivityHeaderCell.m */,
+				81810C071B6F7D9F008AEACD /* ActivityHeaderCell.xib */,
+			);
+			path = ActivityHeaderCell;
+			sourceTree = "<group>";
+		};
+		81810BFF1B6F7D6C008AEACD /* ActivityDetailCell */ = {
+			isa = PBXGroup;
+			children = (
+				81810C001B6F7D6C008AEACD /* ActivityDetailCell.h */,
+				81810C011B6F7D6C008AEACD /* ActivityDetailCell.m */,
+				81810C021B6F7D6C008AEACD /* ActivityDetailCell.xib */,
+			);
+			path = ActivityDetailCell;
+			sourceTree = "<group>";
+		};
+		81810C0A1B70C655008AEACD /* ActivityDefaultCell */ = {
+			isa = PBXGroup;
+			children = (
+				81810C0B1B70C680008AEACD /* ActivityDefaultCell.h */,
+				81810C0C1B70C680008AEACD /* ActivityDefaultCell.m */,
+				81810C0D1B70C680008AEACD /* ActivityDefaultCell.xib */,
+			);
+			path = ActivityDefaultCell;
+			sourceTree = "<group>";
+		};
+		81810C101B70EF50008AEACD /* ActivityButtonCell */ = {
+			isa = PBXGroup;
+			children = (
+				81810C111B70EF75008AEACD /* ActivityButtonCell.h */,
+				81810C121B70EF75008AEACD /* ActivityButtonCell.m */,
+				81810C131B70EF75008AEACD /* ActivityButtonCell.xib */,
+			);
+			path = ActivityButtonCell;
+			sourceTree = "<group>";
+		};
+		81810C1A1B70FFA1008AEACD /* NearShop-ShopDetail */ = {
+			isa = PBXGroup;
+			children = (
+				81810C1B1B70FFA1008AEACD /* ShopDetailViewController.h */,
+				81810C1C1B70FFA1008AEACD /* ShopDetailViewController.m */,
+				81810C2A1B71032E008AEACD /* ShopLocationCell */,
+				81810C1E1B70FFDE008AEACD /* ShopActivityCell */,
+				81810C1F1B70FFDE008AEACD /* ShopHeaderCell */,
+			);
+			path = "NearShop-ShopDetail";
+			sourceTree = "<group>";
+		};
+		81810C1E1B70FFDE008AEACD /* ShopActivityCell */ = {
+			isa = PBXGroup;
+			children = (
+				81810C251B71002A008AEACD /* ShopActivityCell.h */,
+				81810C261B71002A008AEACD /* ShopActivityCell.m */,
+				81810C271B71002A008AEACD /* ShopActivityCell.xib */,
+			);
+			path = ShopActivityCell;
+			sourceTree = "<group>";
+		};
+		81810C1F1B70FFDE008AEACD /* ShopHeaderCell */ = {
+			isa = PBXGroup;
+			children = (
+				81810C201B71000B008AEACD /* ShopHeaderCell.h */,
+				81810C211B71000B008AEACD /* ShopHeaderCell.m */,
+				81810C221B71000B008AEACD /* ShopHeaderCell.xib */,
+			);
+			path = ShopHeaderCell;
+			sourceTree = "<group>";
+		};
+		81810C2A1B71032E008AEACD /* ShopLocationCell */ = {
+			isa = PBXGroup;
+			children = (
+				81810C2B1B710351008AEACD /* ShopLocationCell.h */,
+				81810C2C1B710351008AEACD /* ShopLocationCell.m */,
+				81810C2D1B710351008AEACD /* ShopLocationCell.xib */,
+			);
+			path = ShopLocationCell;
+			sourceTree = "<group>";
+		};
 		81E1DF171B6CA1E500CB6DA1 /* Gym-Main */ = {
 			isa = PBXGroup;
 			children = (
 				81810BE71B6E61B5008AEACD /* LoginViewController.h */,
 				81810BE81B6E61B5008AEACD /* LoginViewController.m */,
+				81810C301B71170C008AEACD /* RegisterViewController.h */,
+				81810C311B71170C008AEACD /* RegisterViewController.m */,
+				81810C331B7117F5008AEACD /* ConfirmPasswordViewController.h */,
+				81810C341B7117F5008AEACD /* ConfirmPasswordViewController.m */,
 				81E1DF1E1B6CA35600CB6DA1 /* Gym-Booking */,
 				81E1DF1F1B6CA35600CB6DA1 /* Gym-HomePage */,
 				81E1DF201B6CA35600CB6DA1 /* Gym-NearShop */,
@@ -225,6 +371,7 @@
 			children = (
 				81810BB91B6CA593008AEACD /* HomePageViewController.h */,
 				81810BBA1B6CA593008AEACD /* HomePageViewController.m */,
+				81810BEE1B6F62C5008AEACD /* HomePage-Activity */,
 				81810BBC1B6CA656008AEACD /* HomePageCell */,
 			);
 			path = "Gym-HomePage";
@@ -235,6 +382,7 @@
 			children = (
 				81810BDB1B6D0371008AEACD /* ShopViewController.h */,
 				81810BDC1B6D0371008AEACD /* ShopViewController.m */,
+				81810C1A1B70FFA1008AEACD /* NearShop-ShopDetail */,
 				81810BDE1B6D0538008AEACD /* ShopCell */,
 			);
 			path = "Gym-NearShop";
@@ -395,10 +543,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81810C291B71002A008AEACD /* ShopActivityCell.xib in Resources */,
+				81810C041B6F7D6C008AEACD /* ActivityDetailCell.xib in Resources */,
 				81E1DF1D1B6CA1E500CB6DA1 /* Images.xcassets in Resources */,
+				81810C0F1B70C680008AEACD /* ActivityDefaultCell.xib in Resources */,
+				81810C2F1B710351008AEACD /* ShopLocationCell.xib in Resources */,
 				81810BD31B6CFC8E008AEACD /* ChatCell.xib in Resources */,
 				9AE1063E1B6DE68C00DCCA27 /* Main.storyboard in Resources */,
 				81810BC11B6CA679008AEACD /* HomePageCell.xib in Resources */,
+				81810C151B70EF75008AEACD /* ActivityButtonCell.xib in Resources */,
+				81810C091B6F7D9F008AEACD /* ActivityHeaderCell.xib in Resources */,
+				81810C241B71000B008AEACD /* ShopHeaderCell.xib in Resources */,
 				9AE106411B6DE69E00DCCA27 /* LaunchScreen.xib in Resources */,
 				81810BE31B6D055E008AEACD /* ShopCell.xib in Resources */,
 			);
@@ -453,13 +608,24 @@
 			files = (
 				81810BC91B6CF8AF008AEACD /* DCFilterCell.m in Sources */,
 				81810BD21B6CFC8E008AEACD /* ChatCell.m in Sources */,
+				81810C0E1B70C680008AEACD /* ActivityDefaultCell.m in Sources */,
 				81810BE21B6D055E008AEACD /* ShopCell.m in Sources */,
 				9AE1061C1B6C9F6E00DCCA27 /* AppDelegate.m in Sources */,
+				81810C351B7117F5008AEACD /* ConfirmPasswordViewController.m in Sources */,
+				81810C1D1B70FFA1008AEACD /* ShopDetailViewController.m in Sources */,
 				81810BD91B6D000C008AEACD /* CALayer+StoryboardExtention.m in Sources */,
+				81810C031B6F7D6C008AEACD /* ActivityDetailCell.m in Sources */,
+				81810C081B6F7D9F008AEACD /* ActivityHeaderCell.m in Sources */,
+				81810C2E1B710351008AEACD /* ShopLocationCell.m in Sources */,
+				81810C141B70EF75008AEACD /* ActivityButtonCell.m in Sources */,
+				81810C321B71170C008AEACD /* RegisterViewController.m in Sources */,
 				9AE106191B6C9F6E00DCCA27 /* main.m in Sources */,
 				81810BC41B6CF7F0008AEACD /* SocialViewController.m in Sources */,
 				81810BBB1B6CA593008AEACD /* HomePageViewController.m in Sources */,
 				81810BE91B6E61B5008AEACD /* LoginViewController.m in Sources */,
+				81810BF11B6F62E1008AEACD /* ActivityViewController.m in Sources */,
+				81810C231B71000B008AEACD /* ShopHeaderCell.m in Sources */,
+				81810C281B71002A008AEACD /* ShopActivityCell.m in Sources */,
 				81810BC01B6CA679008AEACD /* HomePageCell.m in Sources */,
 				81810BDD1B6D0371008AEACD /* ShopViewController.m in Sources */,
 				81810BDA1B6D000C008AEACD /* UITableView+Extention.m in Sources */,

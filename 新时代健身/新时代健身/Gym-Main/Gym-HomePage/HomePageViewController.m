@@ -8,6 +8,7 @@
 
 #import "HomePageViewController.h"
 #import "HomePageCell.h"
+#import "ActivityViewController.h"
 
 @interface HomePageViewController ()<UITableViewDataSource, UITableViewDelegate, HomePageCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -80,6 +81,10 @@
 #pragma mark - HomePageCell
 
 - (void)homePageCellOrderButtonTapped:(HomePageCell *)homePageCell {
+    
+    ActivityViewController *activityViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"activityView"];
+    
+    [self.navigationController pushViewController:activityViewController animated:YES];
     
 }
 
