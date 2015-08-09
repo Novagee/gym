@@ -166,8 +166,8 @@
     UIImage *image = [UIImage imageWithContentsOfFile:imagePath];
     CGFloat width = image.size.width;
     CGFloat height = image.size.height;
+    [self acceptProfile:nil];
     NSString *receiveProfile = [[NSUserDefaults standardUserDefaults] objectForKey:TCHAcceptProfile];
-
     
     NSMutableDictionary *parameters = [@{@"name":[NSString performHandleNUll:name placeHolder:@""],
                                  @"lat": [NSString performHandleNUll:lat placeHolder:@""],
@@ -217,7 +217,7 @@
 
 -(void)updateAccountInfo {
     NSDictionary *profileDict = [[NSUserDefaults standardUserDefaults] objectForKey:UserProfile];
-    NSString *uuid = [TCHUtility GetUUID];
+    NSString *uuid = profileDict[@"uuid"];
     NSString *lat = [NSString stringWithFormat:@"%0.6f",appDelegate.bestEffortAtLocation.coordinate.latitude];
     NSString *lng = [NSString stringWithFormat:@"%0.6f",appDelegate.bestEffortAtLocation.coordinate.longitude];
 

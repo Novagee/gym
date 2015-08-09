@@ -8,20 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import "NSLoading.h"
-#import "TCHCurrentLocationHelper.h"
 #import "WXApi.h"
+#import <CoreLocation/CoreLocation.h>
 
-@interface TCHAppDelegate : UIResponder <UIApplicationDelegate, WXApiDelegate> {
+@interface TCHAppDelegate : UIResponder <UIApplicationDelegate, WXApiDelegate, CLLocationManagerDelegate> {
     NSLoading *process;
 
 }
 
-@property (nonatomic, strong) TCHCurrentLocationHelper *tchCurrentLocationHelper;
 @property (nonatomic, retain) CLLocation *bestEffortAtLocation;
-
 @property (strong, nonatomic) IBOutlet UIWindow *window;
 @property (strong, nonatomic) IBOutlet UINavigationController *navigationController;
-
+@property (nonatomic, retain) CLLocationManager *locationManager;
 @property (strong, nonatomic) NSString *numOfUnreadMessages;
 
 -(void)showLoading;
@@ -30,7 +28,6 @@
 -(NSString *)codeForGender:(NSInteger)code;
 -(NSString *) distanceFromTargetLocation: (CLLocation *) location;
 -(NSString *)dateTimeDifference:(NSString *)dateString;
-
 -(UIImage *)previewImage:(UIImage *)sourceImage;
 
 @end

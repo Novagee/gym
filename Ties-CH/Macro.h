@@ -1,5 +1,5 @@
 
-#define API_HOME     @"http://192.168.1.10/jy/"
+#define API_HOME     @"http://123.56.155.120/jy/"
 #define WeChatAppKey @"96503d2980ed218ec36e3c725138d741"
 
 #define TimeStamp [NSString stringWithFormat:@"%f",[[NSDate date] timeIntervalSince1970] * 1000]

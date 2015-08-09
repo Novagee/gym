@@ -99,7 +99,7 @@
 
 -(void)getUnreadMessagesCount {
     NSDictionary *profileDict = [[NSUserDefaults standardUserDefaults] objectForKey:UserProfile];
-    NSString *uuid = [TCHUtility GetUUID];
+    NSString *uuid = profileDict[@"uuid"];
     if (!profileDict) {
         return;
     }
@@ -145,7 +145,7 @@
     NSString *lat = [NSString stringWithFormat:@"%0.6f",appDelegate.bestEffortAtLocation.coordinate.latitude];
     NSString *lng = [NSString stringWithFormat:@"%0.6f",appDelegate.bestEffortAtLocation.coordinate.longitude];
     NSString *interestIn = [profileDict objectForKey:@"interestIn"];
-    NSString *uuid = [TCHUtility GetUUID];
+    NSString *uuid = profileDict[@"uuid"];
     if (!interestIn) {
         return;
     }

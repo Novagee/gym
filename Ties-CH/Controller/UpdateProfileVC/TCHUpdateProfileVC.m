@@ -195,7 +195,7 @@
     NSString *lng = [NSString stringWithFormat:@"%0.6f",appDelegate.bestEffortAtLocation.coordinate.longitude];
     NSString *genderCode = [[[NSUserDefaults standardUserDefaults] objectForKey:TCHGenderCode] isEqualToString:TCHMale] ? @"M" : @"F";
     NSString *interestIn = [profileDict objectForKey:@"interestIn"];
-    NSString *uuid = [TCHUtility GetUUID];
+    NSString *uuid = profileDict[@"uuid"];
     
     NSString *imagePath = [SelfProfileImageName pathInDocumentDirectory];
     UIImage *image = [UIImage imageWithContentsOfFile:imagePath];

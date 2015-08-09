@@ -10,6 +10,7 @@
 #import "VLBCameraView.h"
 #import "TCHTutorialScreen.h"
 #import "TCHUtility.h"
+#import "DCPathButton.h"
 
 @interface TCHMessageComposeVC () <UITextViewDelegate, VLBCameraViewDelegate, UIAlertViewDelegate> {
     UIImage *capturedImage;
@@ -58,9 +59,8 @@
         [self showTutorial];
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:TCHTutorialForMessageCompose];
     }
-    
-    _centerButton = [[DCPathButton alloc]initWithCenterImage:[UIImage imageNamed:@"camera-bounce"]
-                                                          hilightedImage:[UIImage imageNamed:@"camera-bounce"]];
+
+    _centerButton = [[DCPathButton alloc] initWithCenterImage:[UIImage imageNamed:@"camera-bounce"] highlightedImage:[UIImage imageNamed:@"camera-bounc"]];
     
     DCPathItemButton *itemButton_1 = [[DCPathItemButton alloc]initWithImage:[UIImage imageNamed:@"profile-bounce"]
                                                            highlightedImage:[UIImage imageNamed:@"profile-bounce"]
@@ -72,7 +72,7 @@
                                                             backgroundImage:[UIImage imageNamed:@"takephoto-bounce"]
                                                  backgroundHighlightedImage:[UIImage imageNamed:@"takephoto-bounce"]];
     
-    [_centerButton addPathItem:@[itemButton_1,itemButton_2]];
+    [_centerButton addPathItems:@[itemButton_1,itemButton_2]];
     _centerButton.delegate = self;
     [self.view addSubview:_centerButton];
 }
@@ -285,7 +285,7 @@
 -(void)sendMessageWithImage:(UIImage *)image {
     
     NSDictionary *profileDict = [[NSUserDefaults standardUserDefaults] objectForKey:UserProfile];
-    NSString *uuid = [TCHUtility GetUUID];
+    NSString *uuid = profileDict[@"uuid"];
     CGFloat width = image.size.width;
     CGFloat height = image.size.height;
     NSMutableDictionary *parameters = [@{
@@ -339,7 +339,7 @@
 
 -(void)replyMessageWithImage:(UIImage *)image {
     NSDictionary *profileDict = [[NSUserDefaults standardUserDefaults] objectForKey:UserProfile];
-    NSString *uuid = [TCHUtility GetUUID];
+    NSString *uuid = profileDict[@"uuid"];
     CGFloat width = image.size.width;
     CGFloat height = image.size.height;
     NSMutableDictionary *parameters = [@{

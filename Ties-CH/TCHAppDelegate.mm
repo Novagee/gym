@@ -13,8 +13,6 @@
 
 @synthesize window;
 @synthesize navigationController;
-
-@synthesize tchCurrentLocationHelper;
 @synthesize bestEffortAtLocation;
 
 @synthesize numOfUnreadMessages;
@@ -47,23 +45,21 @@
     
     [WXApi registerApp:WeChatAppKey];
     
-    [self startUpdatingLocation];
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
+    if([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]){
+        [self.locationManager requestWhenInUseAuthorization];
+        [self.locationManager requestAlwaysAuthorization];
+        
+    }else{
+        [self.locationManager startUpdatingLocation];
+    }
     
     //crash log
 //    [BugSenseController sharedControllerWithBugSenseAPIKey:@"d75f4483"];
     
     return YES;
-}
-
--(void)startUpdatingLocation {
-    if (!self.tchCurrentLocationHelper) {
-        
-        self.tchCurrentLocationHelper = [[TCHCurrentLocationHelper alloc] init:^(CLLocation *currentLocation) {
-            self.bestEffortAtLocation = currentLocation;
-        } failure:^(NSString *strCurrentLocationError) {
-            
-        }];
-    }
 }
 
 #pragma mark -
@@ -327,6 +323,55 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     
+}
+
+#pragma mark - Location manager delegate
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
+    CLLocation *newLocation = [locations objectAtIndex:0];
+    self.bestEffortAtLocation = newLocation;
+    NSTimeInterval locationAge = -[newLocation.timestamp timeIntervalSinceNow];
+    if (locationAge > 5.0) return;
+    // test that the horizontal accuracy does not indicate an invalid measurement
+    if (newLocation.horizontalAccuracy < 0) return;
+    // test the measurement to see if it is more accurate than the previous measurement
+    if (self.bestEffortAtLocation == nil || self.bestEffortAtLocation.horizontalAccuracy > newLocation.horizontalAccuracy) {
+        
+        self.bestEffortAtLocation = newLocation;
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
+        if (newLocation.horizontalAccuracy <= self.locationManager.desiredAccuracy) {
+            [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(stopUpdatingLocation:) object:nil];
+        }
+    }
+}
+
+-(void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
+{
+    switch (status) {
+        case kCLAuthorizationStatusNotDetermined:
+        case kCLAuthorizationStatusRestricted:
+        case kCLAuthorizationStatusDenied:
+        {
+            // do some error handling
+        }
+            break;
+        default:{
+            [self.locationManager startUpdatingLocation];
+        }
+            break;
+    }
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+    
+    if ([error code] != kCLErrorLocationUnknown) {
+        [self stopUpdatingLocation:NSLocalizedString(@"Error", @"Error")];
+    }
+}
+
+- (void)stopUpdatingLocation:(NSString *)state {
+    [self.locationManager stopUpdatingLocation];
+    self.locationManager.delegate = nil;
 }
 
 @end

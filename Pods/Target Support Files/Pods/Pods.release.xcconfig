@@ -1,0 +1,7 @@
+FRAMEWORK_SEARCH_PATHS = "$(PODS_ROOT)/BugSense/BugSense 3.6"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/BugSense" "${PODS_ROOT}/Headers/Public/DCPathButton" $(SDKROOT)/usr/include/libz
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AFNetworking" -isystem "${PODS_ROOT}/Headers/Public/BugSense" -isystem "${PODS_ROOT}/Headers/Public/DCPathButton"
+OTHER_LDFLAGS = -ObjC -l"Pods-AFNetworking" -l"Pods-BugSense" -l"Pods-DCPathButton" -l"z" -framework "AudioToolBox" -framework "BugSense-iOS" -framework "CoreGraphics" -framework "MobileCoreServices" -framework "QuartzCore" -framework "Security" -framework "SystemConfiguration"
+OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
+PODS_ROOT = ${SRCROOT}/Pods

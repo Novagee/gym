@@ -178,12 +178,12 @@
     if (!profileDict) {
         return;
     }
-    NSString *uuid = [TCHUtility GetUUID];
+    NSString *uuid = profileDict[@"uuid"];
     
     NSMutableDictionary *parameters = [@{
                                  @"uuid" : uuid,
                                  @"timestamp" : timeStamp,
-                                 @"pageNumber": [NSString stringWithFormat:@"%d",pageNumber],
+                                 @"pageNumber": [NSString stringWithFormat:@"%ld",(long)pageNumber],
                                  @"pageSize": @"20"} mutableCopy];
     [parameters handleNullValues];
     AFHTTPRequestOperationManager *client = [AFHTTPRequestOperationManager manager];
@@ -233,7 +233,7 @@
     timeStamp = TimeStamp;
     
     NSDictionary *profileDict = [[NSUserDefaults standardUserDefaults] objectForKey:UserProfile];
-    NSString *uuid = [TCHUtility GetUUID];
+    NSString *uuid = profileDict[@"uuid"];
     
     NSMutableDictionary *parameters = [@{
                                  @"uuid" : uuid,
@@ -279,7 +279,7 @@
 -(void)sendRequest:(NSString *)receiver {
     
     NSDictionary *profileDict = [[NSUserDefaults standardUserDefaults] objectForKey:UserProfile];
-    NSString *uuid = [TCHUtility GetUUID];
+    NSString *uuid = profileDict[@"uuid"];
     
     NSMutableDictionary *parameters = [@{
                                  @"uuid" : uuid,
@@ -315,7 +315,7 @@
 
 -(void)acceptRequestWithMessageId:(NSString *)messageId {
     NSDictionary *profileDict = [[NSUserDefaults standardUserDefaults] objectForKey:UserProfile];
-    NSString *uuid = [TCHUtility GetUUID];
+    NSString *uuid = profileDict[@"uuid"];
     
     NSMutableDictionary *parameters = [@{
                                  @"uuid" : uuid,
@@ -348,7 +348,7 @@
 
 -(void)deleteMessageWithMessageId:(NSString *)messageId {
     NSDictionary *profileDict = [[NSUserDefaults standardUserDefaults] objectForKey:UserProfile];
-    NSString *uuid = [TCHUtility GetUUID];
+    NSString *uuid = profileDict[@"uuid"];
     
     NSMutableDictionary *parameters = [@{
                                  @"uuid" : uuid,
@@ -377,7 +377,7 @@
 
 -(void)blockUserMessages:(NSString *)messageId {
     NSDictionary *profileDict = [[NSUserDefaults standardUserDefaults] objectForKey:UserProfile];
-    NSString *uuid = [TCHUtility GetUUID];
+    NSString *uuid = profileDict[@"uuid"];
     
     NSMutableDictionary *parameters = [@{
                                          @"uuid" : uuid,

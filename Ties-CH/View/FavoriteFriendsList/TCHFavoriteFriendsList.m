@@ -198,7 +198,7 @@
 -(void)fetchFriendsList {
     NSDictionary *profileDict = [[NSUserDefaults standardUserDefaults] objectForKey:UserProfile];
     
-    NSString *uuid = [TCHUtility GetUUID];
+    NSString *uuid = profileDict[@"uuid"];
     
     NSMutableDictionary *parameters = [@{@"uuid": uuid,
                                  @"timestamp" : timeStamp,
@@ -250,7 +250,7 @@
     
     NSDictionary *profileDict = [[NSUserDefaults standardUserDefaults] objectForKey:UserProfile];
     
-    NSString *uuid = [TCHUtility GetUUID];
+    NSString *uuid = profileDict[@"uuid"];
     
     NSMutableDictionary *parameters = [@{@"uuid": uuid,
                                  @"timestamp" : timeStamp,
@@ -292,7 +292,7 @@
 
 -(void)unfriend:(NSString *)friendId {
     NSDictionary *profileDict = [[NSUserDefaults standardUserDefaults] objectForKey:UserProfile];
-    NSString *uuid = [TCHUtility GetUUID];
+    NSString *uuid = profileDict[@"uuid"];
     
     NSMutableDictionary *parameters = [@{
                                  @"uuid" : uuid,
