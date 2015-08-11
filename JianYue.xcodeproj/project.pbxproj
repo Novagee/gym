@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		074203741B79CC0C00F1F88E /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074203621B79CC0C00F1F88E /* HomePageViewController.m */; };
+		074203751B79CC0C00F1F88E /* HomePageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 074203641B79CC0C00F1F88E /* HomePageCell.m */; };
+		074203761B79CC0C00F1F88E /* HomePageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 074203651B79CC0C00F1F88E /* HomePageCell.xib */; };
+		074203771B79CC0C00F1F88E /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074203671B79CC0C00F1F88E /* ActivityViewController.m */; };
+		074203781B79CC0C00F1F88E /* ActivityButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 074203691B79CC0C00F1F88E /* ActivityButtonCell.m */; };
+		074203791B79CC0C00F1F88E /* ActivityButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0742036A1B79CC0C00F1F88E /* ActivityButtonCell.xib */; };
+		0742037A1B79CC0C00F1F88E /* ActivityDefaultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742036C1B79CC0C00F1F88E /* ActivityDefaultCell.m */; };
+		0742037B1B79CC0C00F1F88E /* ActivityDefaultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0742036D1B79CC0C00F1F88E /* ActivityDefaultCell.xib */; };
+		0742037C1B79CC0C00F1F88E /* ActivityDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742036F1B79CC0C00F1F88E /* ActivityDetailCell.m */; };
+		0742037D1B79CC0C00F1F88E /* ActivityDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 074203701B79CC0C00F1F88E /* ActivityDetailCell.xib */; };
+		0742037E1B79CC0C00F1F88E /* ActivityHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 074203721B79CC0C00F1F88E /* ActivityHeaderCell.m */; };
+		0742037F1B79CC0C00F1F88E /* ActivityHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 074203731B79CC0C00F1F88E /* ActivityHeaderCell.xib */; };
 		2BEDA51441AA4298A3BAEEF9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4658047D52D4996BE61FB73 /* libPods.a */; };
 		9AD7B3F41B734879000DFDB2 /* TCHUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD7B3F31B734879000DFDB2 /* TCHUtility.m */; };
 		B6265192194432B900D38A97 /* reply@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6265191194432B900D38A97 /* reply@2x.png */; };
@@ -186,6 +198,25 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		074203611B79CC0C00F1F88E /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageViewController.h; sourceTree = "<group>"; };
+		074203621B79CC0C00F1F88E /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageViewController.m; sourceTree = "<group>"; };
+		074203631B79CC0C00F1F88E /* HomePageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageCell.h; sourceTree = "<group>"; };
+		074203641B79CC0C00F1F88E /* HomePageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageCell.m; sourceTree = "<group>"; };
+		074203651B79CC0C00F1F88E /* HomePageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomePageCell.xib; sourceTree = "<group>"; };
+		074203661B79CC0C00F1F88E /* ActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityViewController.h; sourceTree = "<group>"; };
+		074203671B79CC0C00F1F88E /* ActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityViewController.m; sourceTree = "<group>"; };
+		074203681B79CC0C00F1F88E /* ActivityButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityButtonCell.h; sourceTree = "<group>"; };
+		074203691B79CC0C00F1F88E /* ActivityButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityButtonCell.m; sourceTree = "<group>"; };
+		0742036A1B79CC0C00F1F88E /* ActivityButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityButtonCell.xib; sourceTree = "<group>"; };
+		0742036B1B79CC0C00F1F88E /* ActivityDefaultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityDefaultCell.h; sourceTree = "<group>"; };
+		0742036C1B79CC0C00F1F88E /* ActivityDefaultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityDefaultCell.m; sourceTree = "<group>"; };
+		0742036D1B79CC0C00F1F88E /* ActivityDefaultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityDefaultCell.xib; sourceTree = "<group>"; };
+		0742036E1B79CC0C00F1F88E /* ActivityDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityDetailCell.h; sourceTree = "<group>"; };
+		0742036F1B79CC0C00F1F88E /* ActivityDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityDetailCell.m; sourceTree = "<group>"; };
+		074203701B79CC0C00F1F88E /* ActivityDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityDetailCell.xib; sourceTree = "<group>"; };
+		074203711B79CC0C00F1F88E /* ActivityHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityHeaderCell.h; sourceTree = "<group>"; };
+		074203721B79CC0C00F1F88E /* ActivityHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityHeaderCell.m; sourceTree = "<group>"; };
+		074203731B79CC0C00F1F88E /* ActivityHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityHeaderCell.xib; sourceTree = "<group>"; };
 		1CF3E2BE2519C48D003D14CC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		78D2B1BDCB937C2F0A951EA5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9AD7B3F21B734879000DFDB2 /* TCHUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCHUtility.h; sourceTree = "<group>"; };
@@ -447,6 +478,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		074203601B79CBE600F1F88E /* Home event */ = {
+			isa = PBXGroup;
+			children = (
+				074203611B79CC0C00F1F88E /* HomePageViewController.h */,
+				074203621B79CC0C00F1F88E /* HomePageViewController.m */,
+				074203631B79CC0C00F1F88E /* HomePageCell.h */,
+				074203641B79CC0C00F1F88E /* HomePageCell.m */,
+				074203651B79CC0C00F1F88E /* HomePageCell.xib */,
+				074203661B79CC0C00F1F88E /* ActivityViewController.h */,
+				074203671B79CC0C00F1F88E /* ActivityViewController.m */,
+				074203681B79CC0C00F1F88E /* ActivityButtonCell.h */,
+				074203691B79CC0C00F1F88E /* ActivityButtonCell.m */,
+				0742036A1B79CC0C00F1F88E /* ActivityButtonCell.xib */,
+				0742036B1B79CC0C00F1F88E /* ActivityDefaultCell.h */,
+				0742036C1B79CC0C00F1F88E /* ActivityDefaultCell.m */,
+				0742036D1B79CC0C00F1F88E /* ActivityDefaultCell.xib */,
+				0742036E1B79CC0C00F1F88E /* ActivityDetailCell.h */,
+				0742036F1B79CC0C00F1F88E /* ActivityDetailCell.m */,
+				074203701B79CC0C00F1F88E /* ActivityDetailCell.xib */,
+				074203711B79CC0C00F1F88E /* ActivityHeaderCell.h */,
+				074203721B79CC0C00F1F88E /* ActivityHeaderCell.m */,
+				074203731B79CC0C00F1F88E /* ActivityHeaderCell.xib */,
+			);
+			name = "Home event";
+			sourceTree = "<group>";
+		};
 		9AD7B3F11B734864000DFDB2 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -928,6 +985,7 @@
 		DCD49C34193DD2A1001A1CC4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				074203601B79CBE600F1F88E /* Home event */,
 				B636C40C199ECD15000378FC /* AccountSettings */,
 				B636C410199ECD15000378FC /* AgreementView */,
 				B636C415199ECD15000378FC /* FavoriteFriendsList */,
@@ -1209,6 +1267,7 @@
 				DCD49C0C193DD155001A1CC4 /* InfoPlist.strings in Resources */,
 				B6908CDA195AC29700A1095A /* scroll-3-iPhone4@2x.png in Resources */,
 				DCBD1510194B21E000A5AC8F /* close-border.png in Resources */,
+				0742037B1B79CC0C00F1F88E /* ActivityDefaultCell.xib in Resources */,
 				DCBD150C194B07FC00A5AC8F /* back-gray.png in Resources */,
 				B64042F619A47753006EE8B1 /* back-icon.png in Resources */,
 				B636C43A199ECD15000378FC /* AgreementView.xib in Resources */,
@@ -1218,6 +1277,7 @@
 				B6265192194432B900D38A97 /* reply@2x.png in Resources */,
 				B6908CCE195ABD6600A1095A /* tutorial-message-composer-iPhone4.png in Resources */,
 				B66E176919A695D6005FEB29 /* takephoto-bounce.png in Resources */,
+				074203761B79CC0C00F1F88E /* HomePageCell.xib in Resources */,
 				B626EA2E1942F7A00023C5EB /* setting_gender_1.png in Resources */,
 				B626EA441942FB210023C5EB /* setting.png in Resources */,
 				DC582D6819487F0000921AF8 /* wechat.png in Resources */,
@@ -1239,7 +1299,9 @@
 				B626EA301942F7A00023C5EB /* setting_gender_3.png in Resources */,
 				B626EA861943D7770023C5EB /* username-background.png in Resources */,
 				B636C446199ECD15000378FC /* TCHMessageListCell.xib in Resources */,
+				0742037F1B79CC0C00F1F88E /* ActivityHeaderCell.xib in Resources */,
 				B636C43E199ECD15000378FC /* TCHFriendListCell.xib in Resources */,
+				074203791B79CC0C00F1F88E /* ActivityButtonCell.xib in Resources */,
 				DC582D99194892A400921AF8 /* unchecked.png in Resources */,
 				DC872AED193F28C80091DE07 /* m_icon@2x.png in Resources */,
 				DC49EA411941A430005AA1E7 /* scroll-up-arrow@2x.png in Resources */,
@@ -1257,6 +1319,7 @@
 				B626EA401942FAF80023C5EB /* logo-home.png in Resources */,
 				DC79826C19497E6A00162DE3 /* home-icon.png in Resources */,
 				DC582D98194892A400921AF8 /* checked.png in Resources */,
+				0742037D1B79CC0C00F1F88E /* ActivityDetailCell.xib in Resources */,
 				DC872AF1193F28E80091DE07 /* m_icon.png in Resources */,
 				B6F0E8D119BCE5A80009033D /* block@2x.png in Resources */,
 				B626EA661942FFDA0023C5EB /* ok-icon@2x.png in Resources */,
@@ -1352,6 +1415,7 @@
 				B636C406199ECC7D000378FC /* TCHMessageComposeVC.m in Sources */,
 				B636C436199ECD15000378FC /* TCHAccountSettings.m in Sources */,
 				B636C445199ECD15000378FC /* TCHMessageListCell.m in Sources */,
+				0742037E1B79CC0C00F1F88E /* ActivityHeaderCell.m in Sources */,
 				DC872ABE193F03520091DE07 /* DDLog.m in Sources */,
 				DCD49CE0193DFA2F001A1CC4 /* Toast+UIView.m in Sources */,
 				DC582D9D194892A400921AF8 /* SBJsonBase.m in Sources */,
@@ -1361,6 +1425,7 @@
 				DC971F651940735F00DA7EE2 /* NSString+Extensions.m in Sources */,
 				DCD49CDF193DFA2F001A1CC4 /* NSMutableDictionary+Extension.m in Sources */,
 				DC582D96194892A400921AF8 /* Address+Additions.m in Sources */,
+				074203751B79CC0C00F1F88E /* HomePageCell.m in Sources */,
 				B6A2585D19598C7F000E4216 /* GSIndeterminateProgressView.m in Sources */,
 				DC582D9E194892A400921AF8 /* SBJsonParser.m in Sources */,
 				B636C447199ECD15000378FC /* TCHProfileSelection.m in Sources */,
@@ -1370,17 +1435,21 @@
 				B636C449199ECD15000378FC /* TCHRootView.m in Sources */,
 				B636C43B199ECD15000378FC /* TCHFavoriteFriendsList.m in Sources */,
 				B636C443199ECD15000378FC /* TCHMessageList.m in Sources */,
+				074203771B79CC0C00F1F88E /* ActivityViewController.m in Sources */,
 				DC872AC1193F03520091DE07 /* DispatchQueueLogFormatter.m in Sources */,
 				B636C43D199ECD15000378FC /* TCHFriendListCell.m in Sources */,
+				074203781B79CC0C00F1F88E /* ActivityButtonCell.m in Sources */,
 				DC872ABF193F03520091DE07 /* DDTTYLogger.m in Sources */,
 				B636C404199ECC7D000378FC /* TCHMainViewController.m in Sources */,
 				DC872A88193EEA8F0091DE07 /* MNMBottomPullToRefreshManager.m in Sources */,
 				DC582D9B194892A400921AF8 /* NSString+SBJSON.m in Sources */,
 				DC582D9A194892A400921AF8 /* NSObject+SBJSON.m in Sources */,
 				DC582D9F194892A400921AF8 /* SBJsonWriter.m in Sources */,
+				0742037C1B79CC0C00F1F88E /* ActivityDetailCell.m in Sources */,
 				DCD49CDE193DFA2F001A1CC4 /* NSLoading.m in Sources */,
 				DC582DA2194892A400921AF8 /* CustomIOS7AlertView.m in Sources */,
 				B636C439199ECD15000378FC /* AgreementView.m in Sources */,
+				0742037A1B79CC0C00F1F88E /* ActivityDefaultCell.m in Sources */,
 				DCD49C12193DD155001A1CC4 /* TCHAppDelegate.mm in Sources */,
 				DC872AC6193F03520091DE07 /* VLBCameraView.m in Sources */,
 				DC872AF7193F317F0091DE07 /* NKColorSwitch.m in Sources */,
@@ -1392,6 +1461,7 @@
 				DC582DA3194892A400921AF8 /* UIAlertView+UITableView.m in Sources */,
 				DC582D9C194892A400921AF8 /* SBJSON.m in Sources */,
 				DC872A89193EEA8F0091DE07 /* MNMBottomPullToRefreshView.m in Sources */,
+				074203741B79CC0C00F1F88E /* HomePageViewController.m in Sources */,
 				DC872ABB193F03520091DE07 /* DDAbstractDatabaseLogger.m in Sources */,
 				DCD49C0E193DD155001A1CC4 /* main.m in Sources */,
 			);

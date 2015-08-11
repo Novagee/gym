@@ -7,7 +7,6 @@
 //
 
 #import "TCHMainViewController.h"
-
 #import "TCHGirlsListingView.h"
 #import "TCHMessageList.h"
 #import "TCHFavoriteFriendsList.h"
@@ -15,6 +14,7 @@
 #import "TCHUpdateProfileVC.h"
 #import "TCHMessageComposeVC.h"
 #import "TCHTutorialScreen.h"
+#import "HomePageViewController.h"
 
 #define kNumPages 4
 
@@ -25,12 +25,11 @@
 
 @property (nonatomic, weak) IBOutlet UIView *mainview;
 @property (nonatomic, weak) IBOutlet UIScrollView *mainScrollView;
-
 @property (nonatomic, weak) TCHGirlsListingView *tchGirlsListingView;
 @property (nonatomic, weak) TCHMessageList *tchMessageList;
 @property (nonatomic, weak) TCHFavoriteFriendsList *tchFavoriteFriendsList;
 @property (nonatomic, weak) TCHAccountSettings *tchAccountSettings;
-
+@property (nonatomic, strong) HomePageViewController *tchHomeEventView;
 
 @end
 
@@ -164,26 +163,26 @@
         }
             break;
             
+//        case 1: {
+//            
+//            if (nil == _tchFavoriteFriendsList.superview) {
+//                
+//                UIViewController *controller = [[UIViewController alloc] initWithNibName:@"TCHFavoriteFriendsList" bundle:[NSBundle mainBundle]];
+//                _tchFavoriteFriendsList = (TCHFavoriteFriendsList *)controller.view;
+//                
+//                CGRect frame = _mainScrollView.frame;
+//                frame.origin.x = frame.size.width * page;
+//                frame.origin.y = 0;
+//                _tchFavoriteFriendsList.frame = frame;
+//                [_mainScrollView addSubview:_tchFavoriteFriendsList];
+//                [_tchFavoriteFriendsList loadView];
+//            } else {
+//                [_tchFavoriteFriendsList reloadLoadedView];
+//            }
+//        }
+//            break;
+            
         case 1: {
-            
-            if (nil == _tchFavoriteFriendsList.superview) {
-                
-                UIViewController *controller = [[UIViewController alloc] initWithNibName:@"TCHFavoriteFriendsList" bundle:[NSBundle mainBundle]];
-                _tchFavoriteFriendsList = (TCHFavoriteFriendsList *)controller.view;
-                
-                CGRect frame = _mainScrollView.frame;
-                frame.origin.x = frame.size.width * page;
-                frame.origin.y = 0;
-                _tchFavoriteFriendsList.frame = frame;
-                [_mainScrollView addSubview:_tchFavoriteFriendsList];
-                [_tchFavoriteFriendsList loadView];
-            } else {
-                [_tchFavoriteFriendsList reloadLoadedView];
-            }
-        }
-            break;
-            
-        case 2: {
             
             if (nil == _tchMessageList.superview) {
                 
@@ -202,7 +201,7 @@
         }
             break;
             
-        case 3: {
+        case 2: {
             
             if (nil == _tchGirlsListingView.superview) {
                 
@@ -226,6 +225,24 @@
             }
         }
             break;
+            
+        case 3: {
+            
+//            if (nil == _tchHomeEventView.view.superview) {
+            
+                _tchHomeEventView = [HomePageViewController new];
+                CGRect frame = _mainScrollView.frame;
+                frame.origin.x = frame.size.width * page;
+                frame.origin.y = 0;
+                _tchHomeEventView.view.frame = frame;
+                [_mainScrollView addSubview:_tchHomeEventView.view];
+                [_tchHomeEventView loadView];
+//            } else {
+//                [_tchHomeEventView reloadInputViews];
+//            }
+        }
+            break;
+            
             
         default:
             break;
