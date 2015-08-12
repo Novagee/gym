@@ -75,6 +75,7 @@
     [_centerButton addPathItems:@[itemButton_1,itemButton_2]];
     _centerButton.delegate = self;
     [self.view addSubview:_centerButton];
+    
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -268,6 +269,7 @@
         _btnTakePhoto.hidden = YES;
         _btnAccept.hidden = NO;
         _btnClose.hidden = NO;
+        
     });
 }
 
@@ -338,6 +340,7 @@
 }
 
 -(void)replyMessageWithImage:(UIImage *)image {
+    
     NSDictionary *profileDict = [[NSUserDefaults standardUserDefaults] objectForKey:UserProfile];
     NSString *uuid = profileDict[@"uuid"];
     CGFloat width = image.size.width;

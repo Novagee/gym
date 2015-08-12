@@ -1,6 +1,6 @@
 //
 //  HomePageViewController.m
-//  
+//
 //
 //  Created by Paul on 8/1/15.
 //
@@ -75,16 +75,15 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
+    
 }
 
 #pragma mark - HomePageCell
 
 - (void)homePageCellOrderButtonTapped:(HomePageCell *)homePageCell {
     
-    ActivityViewController *activityViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"activityView"];
-    
-    [self.navigationController pushViewController:activityViewController animated:YES];
+    ActivityViewController *activityController = [[ActivityViewController alloc]initWithNibName:@"ActivityViewController" bundle:nil];
+    [self presentViewController:activityController animated:YES completion:nil];
     
 }
 

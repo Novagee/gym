@@ -29,7 +29,9 @@
 @property (nonatomic, weak) TCHMessageList *tchMessageList;
 @property (nonatomic, weak) TCHFavoriteFriendsList *tchFavoriteFriendsList;
 @property (nonatomic, weak) TCHAccountSettings *tchAccountSettings;
-@property (nonatomic, strong) HomePageViewController *tchHomeEventView;
+
+@property (strong, nonatomic) HomePageViewController *homePageViewController;
+@property (nonatomic, weak) UIView *homePageView;
 
 @end
 
@@ -214,12 +216,14 @@
                 _tchGirlsListingView.frame = frame;
                 [_mainScrollView addSubview:_tchGirlsListingView];
                 [_tchGirlsListingView loadView];
+                
             } else {
                 [_tchGirlsListingView.notificationBubble setTitle:appDelegate.numOfUnreadMessages forState:UIControlStateNormal];
                 
                 if ([appDelegate.numOfUnreadMessages isEqualToString:@"0"]) {
                     [_tchGirlsListingView.notificationBubble setHidden:YES];
-                } else {
+                }
+                else {
                     [_tchGirlsListingView.notificationBubble setHidden:NO];
                 }
             }
@@ -228,25 +232,24 @@
             
         case 3: {
             
-//            if (nil == _tchHomeEventView.view.superview) {
+            if (! self.homePageView.superview) {
+                
+                _homePageViewController = [[HomePageViewController alloc]initWithNibName:@"HomePageViewController" bundle:nil];
+                _homePageView = self.homePageViewController.view;
+                
+                _homePageView.center = CGPointMake(self.mainview.bounds.size.width * page + self.mainview.bounds.size.width/2 , self.mainview.bounds.size.height/2);
             
-                _tchHomeEventView = [HomePageViewController new];
-                CGRect frame = _mainScrollView.frame;
-                frame.origin.x = frame.size.width * page;
-                frame.origin.y = 0;
-                _tchHomeEventView.view.frame = frame;
-                [_mainScrollView addSubview:_tchHomeEventView.view];
-                [_tchHomeEventView loadView];
-//            } else {
-//                [_tchHomeEventView reloadInputViews];
-//            }
+                [self.mainScrollView addSubview:self.homePageView];
+                
+            }
+            
         }
             break;
-            
             
         default:
             break;
     }
+    
 }
 
 #pragma mark -
