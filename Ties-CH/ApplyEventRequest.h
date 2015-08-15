@@ -10,6 +10,6 @@
 
 @interface ApplyEventRequest : TCHRequest
 
-- (instancetype)initWithUDID:(NSString *)udid mobile:(NSString *)mobile withEventIndex:(NSNumber *)index;
+- (instancetype)initWithUDID:(NSString *)udid mobile:(NSString *)mobile withEventIndex:(NSString *)index;
 
 @end

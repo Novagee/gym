@@ -74,6 +74,7 @@
     
     [_centerButton addPathItems:@[itemButton_1,itemButton_2]];
     _centerButton.delegate = self;
+    
     [self.view addSubview:_centerButton];
     
 }

@@ -13,14 +13,15 @@
 #import "ActivityDefaultCell.h"
 #import "ActivityButtonCell.h"
 
+#import "RingAlertView.h"
 #import "FetchEventRequest.h"
 #import "ApplyEventRequest.h"
 #import "TCHUtility.h"
 
-@interface ActivityViewController ()<UITableViewDataSource, UITableViewDelegate, ActivityButtonCellDelegate>
+@interface ActivityViewController ()<UITableViewDataSource, UITableViewDelegate, ActivityButtonCellDelegate, RingAlertViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) NSMutableDictionary *dataSource;
+
 @property (strong, nonatomic) NSMutableArray *datas;
 
 @end
@@ -61,18 +62,6 @@
                                       ]];
         
     }
-    
-    _dataSource = [[NSMutableDictionary alloc]init];
-    
-    FetchEventRequest *fetchEventRequest = [[FetchEventRequest alloc]initWithEventIndex:@"1"];
-    
-    [fetchEventRequest startWithCompletionBlockWithSuccess:^(YTKBaseRequest *request) {
-        
-        NSLog(@"Event Index: %@", request.responseJSONObject);
-        
-    } failure:^(YTKBaseRequest *request) {
-        
-    }];
     
 }
 
@@ -169,17 +158,33 @@
 
 - (void)activityButtonCellButtonTapped:(ActivityButtonCell *)activityButtonCell {
     
-    ApplyEventRequest *applyEventRequest = [[ApplyEventRequest alloc]initWithUDID:[TCHUtility GetUUID] mobile:self.dataSource[@"mobile"] withEventIndex:self.dataSource[@"id"]];
+    RingAlertView *ringAlertView = [[RingAlertView alloc]init];
+    ringAlertView.center = CGPointMake(self.view.center.x, self.view.center.y - 100);
+    ringAlertView.delegate = self;
+    
+    [ringAlertView showAlertControllerWithTitle:@"Enter your mobile" message:nil textfieldPlaceHolder:@"phone number" cancelButtonText:@"cancel" actionButtonText:@"Ok" type:RingAlertViewTypeDefault];
+    
+}
+
+#pragma mark - RingAlertView Delgate
+
+- (void)ringAlertView:(RingAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    NSDictionary *profileDict = [[NSUserDefaults standardUserDefaults] objectForKey:UserProfile];
+    NSString *uuid = profileDict[@"uuid"];
+    
+#warning PLZ fill the mobile below
+    ApplyEventRequest *applyEventRequest = [[ApplyEventRequest alloc]initWithUDID:uuid mobile:@"1300000000" withEventIndex:self.dataSource[@"id"]];
     
     [applyEventRequest startWithCompletionBlockWithSuccess:^(YTKBaseRequest *request) {
        
-        NSLog(@"Raw data: %@\nRequest: %@", self.dataSource, request.requestOperation);
+        NSLog(@"Apply request: %@ success: %@", request.requestOperation, request.responseJSONObject);
         
     } failure:^(YTKBaseRequest *request) {
         
+        NSLog(@"Apply request failed: %@", request.requestOperation);
+        
     }];
-    
-    NSLog(@"DataSource: %@", self.dataSource);
     
 }
 
@@ -200,12 +205,6 @@
     else {
         return [ActivityDetailCell cellHeight];
     }
-    
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    
     
 }
 

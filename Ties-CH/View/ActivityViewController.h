@@ -10,4 +10,6 @@
 
 @interface ActivityViewController : UIViewController
 
+@property (strong, nonatomic) NSMutableDictionary *dataSource;
+
 @end

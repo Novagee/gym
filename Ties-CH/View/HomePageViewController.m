@@ -114,8 +114,9 @@
 - (void)homePageCellOrderButtonTapped:(HomePageCell *)homePageCell {
     
     ActivityViewController *activityController = [[ActivityViewController alloc]initWithNibName:@"ActivityViewController" bundle:nil];
-    
+
     NSIndexPath *indexPath = [_tableView indexPathForCell:homePageCell];
+    activityController.dataSource = self.dataSource[indexPath.row][0];
     
     [self presentViewController:activityController animated:YES completion:nil];
     

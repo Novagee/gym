@@ -31,7 +31,7 @@
 
 - (NSString *)requestUrl {
     
-    return [NSString stringWithFormat:@"/event/%@/apply?udid=%@&mobile=%@", self.index, self.udid, self.mobile];
+    return [NSString stringWithFormat:@"/event/%@/apply?uuid=%@&mobile=%@", self.index, self.udid, self.mobile];
 
 }
 

@@ -6,7 +6,7 @@
 #import "UIControl+BlockAction.h"
 #import "UITextView+VerticalAlignment.h"
 #import <objc/runtime.h>
-#import "TCHAppDelegate.h"
+#import "AppDelegate.h"
 
 static BOOL alertPresented = FALSE;
 
@@ -329,9 +329,8 @@ static char *completionBlockKey = nil;
 {
     if (!alertPresented)
     {
-        self.oldWindow = [[TCHAppDelegate alloc]init].window;
+        self.oldWindow = [AppDelegate sharedInstance].window;
         self.alertWindow = [RingAlertView sharedAlertWindow];
-        
         self.alertWindow.windowLevel = UIWindowLevelAlert + 1;
                 
         if ([[NSThread currentThread] isMainThread]) {
