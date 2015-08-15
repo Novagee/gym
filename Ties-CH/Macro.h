@@ -47,7 +47,7 @@ label.font = [UIFont fontWithName:fontName size:fontSize];
 
 #define GreenColor [UIColor colorWithRed:54.0/255.0 green:128.0/255.0 blue:8.0/255.0 alpha:1.0]
 #define RedColor [UIColor redColor]
-#define ThemeColor [UIColor colorWithRed:249/255.0 green:40/255.0 blue:105/255.0 alpha:1.000]
+#define ThemeColor [UIColor colorWithRed:20/255.0 green:156/255.0 blue:224/255.0 alpha:1.000]
 
 #define SYSTEM_VERSION_EQUAL_TO(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
 #define SYSTEM_VERSION_GREATER_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)

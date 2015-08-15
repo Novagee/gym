@@ -10,6 +10,6 @@
 
 @interface FetchEventRequest : TCHRequest
 
-- (instancetype)initWithEventIndex:(NSUInteger)index;
+- (instancetype)initWithEventIndex:(NSString *)index;
 
 @end

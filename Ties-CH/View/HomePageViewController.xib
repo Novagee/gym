@@ -50,6 +50,7 @@
                 <constraint firstItem="8PZ-rl-81S" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="uEU-PR-mKP"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="248" y="288"/>
         </view>
     </objects>
 </document>

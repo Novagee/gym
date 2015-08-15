@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="15A235d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -15,7 +16,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="euZ-0G-kfq">
-                        <rect key="frame" x="21" y="14" width="279" height="41"/>
+                        <rect key="frame" x="21" y="13" width="279" height="41"/>
                         <animations/>
                         <color key="backgroundColor" red="0.078431372549019607" green="0.61176470588235299" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -24,21 +25,21 @@
                         <state key="normal" title="我要预约">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
+                        <connections>
+                            <action selector="activityButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="lar-vC-ciw"/>
+                        </connections>
                     </button>
                 </subviews>
                 <animations/>
                 <constraints>
                     <constraint firstAttribute="centerX" secondItem="euZ-0G-kfq" secondAttribute="centerX" constant="-0.5" id="7on-Ui-0Ve"/>
                     <constraint firstItem="euZ-0G-kfq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="13" id="AsH-IK-mjQ"/>
-                    <constraint firstAttribute="centerY" secondItem="euZ-0G-kfq" secondAttribute="centerY" id="E3T-2S-btf"/>
+                    <constraint firstAttribute="centerY" secondItem="euZ-0G-kfq" secondAttribute="centerY" constant="1" id="E3T-2S-btf"/>
                     <constraint firstAttribute="trailingMargin" secondItem="euZ-0G-kfq" secondAttribute="trailing" constant="12" id="ncw-Yj-tue"/>
                 </constraints>
             </tableViewCellContentView>
             <animations/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-            <connections>
-                <outlet property="button" destination="euZ-0G-kfq" id="tID-7G-l4e"/>
-            </connections>
             <point key="canvasLocation" x="38" y="187"/>
         </tableViewCell>
     </objects>

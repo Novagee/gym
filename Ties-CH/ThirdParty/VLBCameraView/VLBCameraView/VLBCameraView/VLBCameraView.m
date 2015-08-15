@@ -215,7 +215,7 @@ VLBCameraViewInit const VLBCameraViewInitBlock = ^(VLBCameraView *cameraView){
         [NSException raise:[NSString stringWithFormat:@"Failed with error %d", (int)[error code]]
                     format:[error localizedDescription], nil];
     }
-	
+	 
     [self.session addInput:deviceInput];
 	
 	self.stillImageOutput = [AVCaptureStillImageOutput new];

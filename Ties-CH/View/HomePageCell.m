@@ -7,8 +7,13 @@
 //
 
 #import "HomePageCell.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface HomePageCell ()
+
+@property (weak, nonatomic) IBOutlet UIImageView *coverView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 
 @end
 
@@ -34,6 +39,22 @@
 + (CGFloat)cellHeight {
     
     return 200.0f;
+    
+}
+
+- (void)configureCell:(NSDictionary *)data {
+    
+    NSLog(@"Data: %@", [data class]);
+    
+    if ([data isKindOfClass:[NSDictionary class]]) {
+        
+        _titleLabel.text = data[@"title"];
+        _descriptionLabel.text = data[@"description"];
+        [_coverView setImageWithURL:[NSURL URLWithString:data[@"pic"]]];
+        
+        NSLog(@"*************%@", data[@"title"]);
+        
+    }
     
 }
 

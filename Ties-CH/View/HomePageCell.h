@@ -20,6 +20,8 @@
 
 @property (weak, nonatomic) id<HomePageCellDelegate> delegate;
 
+- (void)configureCell:(NSDictionary *)data;
+
 + (NSString *)cellIdentifier;
 + (CGFloat)cellHeight;
 

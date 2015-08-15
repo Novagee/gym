@@ -12,7 +12,7 @@
 
 - (NSString *)baseUrl {
     
-    return @"http://123.56.155.120/jy/r/";
+    return @"http://123.56.155.120/jy/r";
     
 }
 

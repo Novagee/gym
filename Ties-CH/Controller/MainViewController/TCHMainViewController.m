@@ -124,7 +124,6 @@
     [self loadScrollViewWithPage:currentPage + 1];
 }
 
-#pragma mark -
 #pragma mark ScrollView Delegate Method
 
 - (void)scrollViewDidScroll:(UIScrollView *)sender {
@@ -252,7 +251,6 @@
     
 }
 
-#pragma mark -
 #pragma mark Memory Management
 
 - (void)didReceiveMemoryWarning {

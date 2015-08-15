@@ -10,13 +10,13 @@
 
 @interface FetchEventRequest ()
 
-@property (assign, nonatomic) NSUInteger index;
+@property (strong, nonatomic) NSString *index;
 
 @end
 
 @implementation FetchEventRequest
 
-- (instancetype)initWithEventIndex:(NSUInteger)index {
+- (instancetype)initWithEventIndex:(NSString *)index {
     
     if (self = [super init]) {
         
@@ -28,9 +28,11 @@
 
 - (NSString *)requestUrl {
     
-    NSLog(@"%@", [super requestUrl]);
+    if (self.index) {
+        return [NSString stringWithFormat:@"/event/%@", self.index];
+    }
     
-    return [super requestUrl];
+    return @"/event/";
     
 }
 

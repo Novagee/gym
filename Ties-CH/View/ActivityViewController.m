@@ -13,10 +13,14 @@
 #import "ActivityDefaultCell.h"
 #import "ActivityButtonCell.h"
 
+#import "FetchEventRequest.h"
+#import "ApplyEventRequest.h"
+#import "TCHUtility.h"
+
 @interface ActivityViewController ()<UITableViewDataSource, UITableViewDelegate, ActivityButtonCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
+@property (strong, nonatomic) NSMutableDictionary *dataSource;
 @property (strong, nonatomic) NSMutableArray *datas;
 
 @end
@@ -30,6 +34,9 @@
     [self registerCustomCells];
     
     [self fetchDatas];
+    
+    
+    
 }
 
 - (void)fetchDatas {
@@ -54,6 +61,18 @@
                                       ]];
         
     }
+    
+    _dataSource = [[NSMutableDictionary alloc]init];
+    
+    FetchEventRequest *fetchEventRequest = [[FetchEventRequest alloc]initWithEventIndex:@"1"];
+    
+    [fetchEventRequest startWithCompletionBlockWithSuccess:^(YTKBaseRequest *request) {
+        
+        NSLog(@"Event Index: %@", request.responseJSONObject);
+        
+    } failure:^(YTKBaseRequest *request) {
+        
+    }];
     
 }
 
@@ -150,7 +169,17 @@
 
 - (void)activityButtonCellButtonTapped:(ActivityButtonCell *)activityButtonCell {
     
+    ApplyEventRequest *applyEventRequest = [[ApplyEventRequest alloc]initWithUDID:[TCHUtility GetUUID] mobile:self.dataSource[@"mobile"] withEventIndex:self.dataSource[@"id"]];
     
+    [applyEventRequest startWithCompletionBlockWithSuccess:^(YTKBaseRequest *request) {
+       
+        NSLog(@"Raw data: %@\nRequest: %@", self.dataSource, request.requestOperation);
+        
+    } failure:^(YTKBaseRequest *request) {
+        
+    }];
+    
+    NSLog(@"DataSource: %@", self.dataSource);
     
 }
 
@@ -175,7 +204,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
+    
     
     
 }
@@ -184,7 +213,9 @@
 
 - (IBAction)backButtonTouchUpInside:(id)sender {
 
-    [self.navigationController popViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
     
 }
 

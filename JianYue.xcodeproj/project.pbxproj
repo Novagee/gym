@@ -34,6 +34,7 @@
 		438EEED11B7B90B500318A2A /* YTKRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 438EEEC81B7B90B500318A2A /* YTKRequest.m */; };
 		438EEF0F1B7B925C00318A2A /* AFDownloadRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 438EEF0E1B7B925C00318A2A /* AFDownloadRequestOperation.m */; };
 		438EEF121B7B9EB400318A2A /* FetchEventRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 438EEF111B7B9EB400318A2A /* FetchEventRequest.m */; };
+		438EEF181B7D80E000318A2A /* ApplyEventRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 438EEF171B7D80E000318A2A /* ApplyEventRequest.m */; };
 		9AD7B3F41B734879000DFDB2 /* TCHUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD7B3F31B734879000DFDB2 /* TCHUtility.m */; };
 		B6265192194432B900D38A97 /* reply@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6265191194432B900D38A97 /* reply@2x.png */; };
 		B6265194194432E400D38A97 /* reply.png in Resources */ = {isa = PBXBuildFile; fileRef = B6265193194432E400D38A97 /* reply.png */; };
@@ -258,6 +259,8 @@
 		438EEF0E1B7B925C00318A2A /* AFDownloadRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFDownloadRequestOperation.m; sourceTree = "<group>"; };
 		438EEF101B7B9EB400318A2A /* FetchEventRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchEventRequest.h; sourceTree = "<group>"; };
 		438EEF111B7B9EB400318A2A /* FetchEventRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchEventRequest.m; sourceTree = "<group>"; };
+		438EEF161B7D80E000318A2A /* ApplyEventRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplyEventRequest.h; sourceTree = "<group>"; };
+		438EEF171B7D80E000318A2A /* ApplyEventRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplyEventRequest.m; sourceTree = "<group>"; };
 		78D2B1BDCB937C2F0A951EA5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9AD7B3F21B734879000DFDB2 /* TCHUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCHUtility.h; sourceTree = "<group>"; };
 		9AD7B3F31B734879000DFDB2 /* TCHUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCHUtility.m; sourceTree = "<group>"; };
@@ -553,6 +556,8 @@
 				438EEEB41B7B905D00318A2A /* TCHRequest.m */,
 				438EEF101B7B9EB400318A2A /* FetchEventRequest.h */,
 				438EEF111B7B9EB400318A2A /* FetchEventRequest.m */,
+				438EEF161B7D80E000318A2A /* ApplyEventRequest.h */,
+				438EEF171B7D80E000318A2A /* ApplyEventRequest.m */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -1532,6 +1537,7 @@
 				B636C404199ECC7D000378FC /* TCHMainViewController.m in Sources */,
 				DC872A88193EEA8F0091DE07 /* MNMBottomPullToRefreshManager.m in Sources */,
 				DC582D9B194892A400921AF8 /* NSString+SBJSON.m in Sources */,
+				438EEF181B7D80E000318A2A /* ApplyEventRequest.m in Sources */,
 				DC582D9A194892A400921AF8 /* NSObject+SBJSON.m in Sources */,
 				DC582D9F194892A400921AF8 /* SBJsonWriter.m in Sources */,
 				438EEECA1B7B90B500318A2A /* YTKBatchRequest.m in Sources */,

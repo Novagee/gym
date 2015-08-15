@@ -105,13 +105,13 @@
     [self.view addSubview:tchTutorialScreen];
 }
 
-- (void)itemButtonTappedAtIndex:(NSUInteger)index
-{
+- (void)pathButton:(DCPathButton *)dcPathButton clickItemButtonAtIndex:(NSUInteger)itemButtonIndex {
+    
     if (_textView.text.length == 0) {
         [appDelegate.window makeToast:PleaseTypeMessage backgroundColor:[UIColor redColor]];
         return;
     }
-    if(index == 0){
+    if(itemButtonIndex == 0){
         NSString *imagePath = [SelfProfileImageName pathInDocumentDirectory];
         capturedImage = [UIImage imageWithContentsOfFile:imagePath];
         _currentDP.image = capturedImage;
@@ -123,7 +123,7 @@
     }
     else{
         CGRect screenRect = [[UIScreen mainScreen] bounds];
-                CGFloat screenWidth = screenRect.size.width;
+        CGFloat screenWidth = screenRect.size.width;
         UIImage *img = [UIImage imageNamed:@"compose-icon"];
         [_btnTakePhoto setImage:img forState:UIControlStateNormal];
         CGRect frame = CGRectMake((screenWidth-img.size.width)/2, _btnTakePhoto.frame.origin.y, img.size.width, _btnTakePhoto.frame.size.height);
@@ -131,6 +131,7 @@
         _btnTakePhoto.hidden = NO;
     }
     _centerButton.hidden = YES;
+    
 }
 
 #pragma mark -

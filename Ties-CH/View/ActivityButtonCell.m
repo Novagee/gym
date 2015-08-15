@@ -32,6 +32,15 @@
     
 }
 
+- (IBAction)activityButtonTapped:(id)sender {
+    
+    if (_delegate && [_delegate respondsToSelector:@selector(activityButtonCellButtonTapped:)]) {
+        
+        [_delegate activityButtonCellButtonTapped:self];
+        
+    }
+    
+}
 
 
 @end
