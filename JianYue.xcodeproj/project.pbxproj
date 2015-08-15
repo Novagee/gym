@@ -35,6 +35,9 @@
 		438EEF0F1B7B925C00318A2A /* AFDownloadRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 438EEF0E1B7B925C00318A2A /* AFDownloadRequestOperation.m */; };
 		438EEF121B7B9EB400318A2A /* FetchEventRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 438EEF111B7B9EB400318A2A /* FetchEventRequest.m */; };
 		438EEF181B7D80E000318A2A /* ApplyEventRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 438EEF171B7D80E000318A2A /* ApplyEventRequest.m */; };
+		9AD5893F1B7F0E7900144FC6 /* RingAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD5893A1B7F0E7900144FC6 /* RingAlertView.m */; };
+		9AD589401B7F0E7900144FC6 /* UIControl+BlockAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD5893C1B7F0E7900144FC6 /* UIControl+BlockAction.m */; };
+		9AD589411B7F0E7900144FC6 /* UITextView+VerticalAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD5893E1B7F0E7900144FC6 /* UITextView+VerticalAlignment.m */; };
 		9AD7B3F41B734879000DFDB2 /* TCHUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD7B3F31B734879000DFDB2 /* TCHUtility.m */; };
 		B6265192194432B900D38A97 /* reply@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6265191194432B900D38A97 /* reply@2x.png */; };
 		B6265194194432E400D38A97 /* reply.png in Resources */ = {isa = PBXBuildFile; fileRef = B6265193194432E400D38A97 /* reply.png */; };
@@ -262,6 +265,12 @@
 		438EEF161B7D80E000318A2A /* ApplyEventRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplyEventRequest.h; sourceTree = "<group>"; };
 		438EEF171B7D80E000318A2A /* ApplyEventRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplyEventRequest.m; sourceTree = "<group>"; };
 		78D2B1BDCB937C2F0A951EA5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		9AD589391B7F0E7900144FC6 /* RingAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RingAlertView.h; sourceTree = "<group>"; };
+		9AD5893A1B7F0E7900144FC6 /* RingAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RingAlertView.m; sourceTree = "<group>"; };
+		9AD5893B1B7F0E7900144FC6 /* UIControl+BlockAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+BlockAction.h"; sourceTree = "<group>"; };
+		9AD5893C1B7F0E7900144FC6 /* UIControl+BlockAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+BlockAction.m"; sourceTree = "<group>"; };
+		9AD5893D1B7F0E7900144FC6 /* UITextView+VerticalAlignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+VerticalAlignment.h"; sourceTree = "<group>"; };
+		9AD5893E1B7F0E7900144FC6 /* UITextView+VerticalAlignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+VerticalAlignment.m"; sourceTree = "<group>"; };
 		9AD7B3F21B734879000DFDB2 /* TCHUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCHUtility.h; sourceTree = "<group>"; };
 		9AD7B3F31B734879000DFDB2 /* TCHUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCHUtility.m; sourceTree = "<group>"; };
 		B6265191194432B900D38A97 /* reply@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reply@2x.png"; sourceTree = "<group>"; };
@@ -1071,6 +1080,12 @@
 		DCD49C34193DD2A1001A1CC4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9AD589391B7F0E7900144FC6 /* RingAlertView.h */,
+				9AD5893A1B7F0E7900144FC6 /* RingAlertView.m */,
+				9AD5893B1B7F0E7900144FC6 /* UIControl+BlockAction.h */,
+				9AD5893C1B7F0E7900144FC6 /* UIControl+BlockAction.m */,
+				9AD5893D1B7F0E7900144FC6 /* UITextView+VerticalAlignment.h */,
+				9AD5893E1B7F0E7900144FC6 /* UITextView+VerticalAlignment.m */,
 				074203601B79CBE600F1F88E /* Home event */,
 				B636C40C199ECD15000378FC /* AccountSettings */,
 				B636C410199ECD15000378FC /* AgreementView */,
@@ -1550,6 +1565,7 @@
 				B636C439199ECD15000378FC /* AgreementView.m in Sources */,
 				0742037A1B79CC0C00F1F88E /* ActivityDefaultCell.m in Sources */,
 				DCD49C12193DD155001A1CC4 /* TCHAppDelegate.mm in Sources */,
+				9AD5893F1B7F0E7900144FC6 /* RingAlertView.m in Sources */,
 				DC872AC6193F03520091DE07 /* VLBCameraView.m in Sources */,
 				438EEED11B7B90B500318A2A /* YTKRequest.m in Sources */,
 				DC872AF7193F317F0091DE07 /* NKColorSwitch.m in Sources */,
@@ -1558,9 +1574,11 @@
 				9AD7B3F41B734879000DFDB2 /* TCHUtility.m in Sources */,
 				DC872AC0193F03520091DE07 /* ContextFilterLogFormatter.m in Sources */,
 				DC582D97194892A400921AF8 /* NSString+Additions.m in Sources */,
+				9AD589401B7F0E7900144FC6 /* UIControl+BlockAction.m in Sources */,
 				438EEECC1B7B90B500318A2A /* YTKChainRequest.m in Sources */,
 				DC872ABC193F03520091DE07 /* DDASLLogger.m in Sources */,
 				B636C442199ECD15000378FC /* TCHGirlsListingView.m in Sources */,
+				9AD589411B7F0E7900144FC6 /* UITextView+VerticalAlignment.m in Sources */,
 				DC582DA3194892A400921AF8 /* UIAlertView+UITableView.m in Sources */,
 				DC582D9C194892A400921AF8 /* SBJSON.m in Sources */,
 				DC872A89193EEA8F0091DE07 /* MNMBottomPullToRefreshView.m in Sources */,
