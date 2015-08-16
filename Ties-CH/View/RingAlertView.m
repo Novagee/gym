@@ -10,7 +10,7 @@
 
 static BOOL alertPresented = FALSE;
 
-@interface RingAlertView ()
+@interface RingAlertView () <UITextFieldDelegate>
 @property (nonatomic, assign) CGFloat messageViewWidth;
 @property (nonatomic, assign) CGFloat iconViewWidth;
 @property (nonatomic, assign) CGFloat iconImageWidth;
@@ -153,6 +153,7 @@ static char *completionBlockKey = nil;
     
     //Setup Textfield
     UITextField *alertTextfield = [UITextField new];
+    alertTextfield.delegate = self;
     [alertTextfield setBorderStyle:UITextBorderStyleRoundedRect];
 
     if (textfieldPlaceHolder) {
@@ -402,6 +403,23 @@ static char *completionBlockKey = nil;
 {
     self.delegate = nil;
     _userInfo = nil;
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    __weak __typeof(&*self)weakSelf = self;
+    //Animation
+    [UIView animateWithDuration:0.5
+                          delay:0.0
+         usingSpringWithDamping:0.8
+          initialSpringVelocity:10.0
+                        options:0
+                     animations:^{
+                         __strong __typeof(&*weakSelf) strongSelf = weakSelf;
+                         
+                         strongSelf.frame = CGRectMake((strongSelf.screenSize.width-strongSelf.messageViewWidth -strongSelf.iconViewWidth)/2, strongSelf.screenSize.height/2 - strongSelf.frame.size.height/2 - 100, strongSelf.iconViewWidth + strongSelf.messageViewWidth, strongSelf.alertViewDynamicHeight);
+                     }
+                     completion:nil];
 }
 
 @end
