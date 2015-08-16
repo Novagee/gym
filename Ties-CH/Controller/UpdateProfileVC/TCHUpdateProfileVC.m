@@ -14,13 +14,15 @@
 #import "TCHAccountSettings.h"
 #import "TCHTutorialScreen.h"
 
-@interface TCHUpdateProfileVC () <VLBCameraViewDelegate>
+@interface TCHUpdateProfileVC () <VLBCameraViewDelegate, UIImagePickerControllerDelegate, UINavigationBarDelegate>
 
 @property (nonatomic, weak) IBOutlet VLBCameraView* cameraView;
 @property (weak, nonatomic) IBOutlet UILabel *placeholder;
 @property (weak, nonatomic) IBOutlet UITextField *taglineTextField;
 @property (nonatomic, weak) IBOutlet UIButton *closeButton;
 @property (nonatomic, weak) IBOutlet UIImageView *imgPreviousProfile;
+
+@property (strong, nonatomic) UIImagePickerController *imagePickerController;
 
 -(IBAction)onClickClose:(id)sender;
 -(IBAction)takePicture:(id)sender;
@@ -59,6 +61,14 @@
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tap];
+    
+    
+    // Init image picker controller
+    //
+    _imagePickerController = [[UIImagePickerController alloc]init];
+    _imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    _imagePickerController.delegate = self;
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -112,14 +122,18 @@
 #pragma clang diagnostic pop
     }
 }
+
 - (IBAction)onClickTagline:(id)sender {
     _placeholder.text = @"";
 }
 
-
 -(IBAction)onHoldCamera:(id)sender {
-    _imgPreviousProfile.hidden = YES;
-    [self.cameraView startShowingPreview];
+    
+//    _imgPreviousProfile.hidden = YES;
+//    [self.cameraView startShowingPreview];
+
+    
+    
 }
 
 -(void)startCamera {
@@ -151,6 +165,7 @@
     
     NSData *imageData = UIImagePNGRepresentation(image);
     [imageData writeToFile:imagePath atomically:YES];
+    
 }
 
 #pragma mark -
@@ -171,24 +186,52 @@
             [self submitInfoOnServer];
         });
     }
-}
-
--(void)cameraView:(VLBCameraView *)cameraView didErrorOnTakePicture:(NSError *)error {
-    //[appDelegate.window makeToast:[error description] backgroundColor:[UIColor redColor]];
-}
-
--(void)cameraView:(VLBCameraView *)cameraView willRekatePicture:(UIImage *)image {
     
 }
 
 -(IBAction)takePicture:(id)sender {
-    [self.cameraView takePicture];
+//    [self.cameraView takePicture];
+    
+    [self presentViewController:self.imagePickerController animated:YES completion:nil];
+    
+}
+
+#pragma mark - Image Picker Controller Delegate
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    UIImage *originImage = info[UIImagePickerControllerOriginalImage];
+    
+    // I copy this code from the origin method above
+    //
+    [self saveCaptureImage:originImage];
+    if ([_closeButton isHidden]) { // When User profile settings not set
+        [self performSelector:@selector(openAppPreferences) withObject:nil afterDelay:1.0];
+        
+    } else {    // If user profile details already saved then update only profile pic
+        
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC));
+        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            [appDelegate showLoading];
+            [self submitInfoOnServer];
+        });
+    }
+    
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
 #pragma mark -
 #pragma mark Web service call
 
--(void)submitInfoOnServer {
+- (void)submitInfoOnServer {
+    
     NSDictionary *profileDict = [[NSUserDefaults standardUserDefaults] objectForKey:UserProfile];
     
     NSString *lat = [NSString stringWithFormat:@"%0.6f",appDelegate.bestEffortAtLocation.coordinate.latitude];
@@ -202,14 +245,15 @@
     
     CGFloat width = image.size.width;
     CGFloat height = image.size.height;
-    NSMutableDictionary *parameters = [@{@"uuid": uuid,
-                                 @"lat": lat,
-                                 @"lng" : lng,
-                                 @"gender" : genderCode,
-                                 @"interestIn" : interestIn,
-                                 @"width":[NSString stringWithFormat:@"%i", (int)width ],
-                                 @"height":[NSString stringWithFormat:@"%i", (int)height],
-                                 @"tagline":_taglineTextField.text} mutableCopy];
+    NSMutableDictionary *parameters = [@{
+                                         @"uuid": uuid,
+                                         @"lat": lat,
+                                         @"lng" : lng,
+                                         @"gender" : genderCode,
+                                         @"interestIn" : interestIn,
+                                         @"width":[NSString stringWithFormat:@"%i", (int)width ],
+                                         @"height":[NSString stringWithFormat:@"%i", (int)height],
+                                         @"tagline":_taglineTextField.text} mutableCopy];
     [parameters handleNullValues];
     NSString *fileName = [NSString stringWithFormat:@"ID_%@.jpg",[profileDict objectForKey:@"id"]];
     
@@ -231,9 +275,12 @@
         [appDelegate stopLoading];
     
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
         [appDelegate.window makeToast:ServerConnection backgroundColor:[UIColor redColor]];
         [appDelegate stopLoading];
+        
     }];
+    
 }
 
 - (void)dismissKeyboard
@@ -242,7 +289,7 @@
 }
 
 #pragma mark -
-#pragma mark Memory Management
+#pragma mark - Memory Management
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
