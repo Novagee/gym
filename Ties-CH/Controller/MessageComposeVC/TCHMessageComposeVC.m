@@ -19,16 +19,14 @@
 @property (nonatomic, weak) IBOutlet VLBCameraView* cameraView;
 @property (nonatomic, weak) IBOutlet UITextView *textView;
 @property (nonatomic, weak) IBOutlet UILabel *textViewPlaceHolder;
-
 @property (nonatomic, weak) IBOutlet UIImageView *currentDP;
-
 //@property (nonatomic, weak) IBOutlet UIButton *btnOpenAlert;
 @property (nonatomic, weak) IBOutlet UIButton *btnTakePhoto;
 @property (nonatomic, weak) IBOutlet UIButton *btnClose;
 @property (nonatomic, weak) IBOutlet UIButton *btnAccept;
 @property (nonatomic, strong) DCPathButton *centerButton;
-
 @property BOOL isUsingProfile;
+@property (strong, nonatomic) UIImagePickerController *imagePickerController;
 
 -(IBAction)onClickClose:(id)sender;
 -(IBAction)takePicture:(id)sender;
@@ -60,22 +58,37 @@
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:TCHTutorialForMessageCompose];
     }
 
-    _centerButton = [[DCPathButton alloc] initWithCenterImage:[UIImage imageNamed:@"camera-bounce"] highlightedImage:[UIImage imageNamed:@"camera-bounc"]];
+//    _centerButton = [[DCPathButton alloc] initWithCenterImage:[UIImage imageNamed:@"takephoto-bounce"] highlightedImage:[UIImage imageNamed:@"takephoto-bounce"]];
     
-    DCPathItemButton *itemButton_1 = [[DCPathItemButton alloc]initWithImage:[UIImage imageNamed:@"profile-bounce"]
-                                                           highlightedImage:[UIImage imageNamed:@"profile-bounce"]
-                                                            backgroundImage:[UIImage imageNamed:@"profile-bounce"]
-                                                 backgroundHighlightedImage:[UIImage imageNamed:@"profile-bounce"]];
+//    DCPathItemButton *itemButton_1 = [[DCPathItemButton alloc]initWithImage:[UIImage imageNamed:@"profile-bounce"]
+//                                                           highlightedImage:[UIImage imageNamed:@"profile-bounce"]
+//                                                            backgroundImage:[UIImage imageNamed:@"profile-bounce"]
+//                                                 backgroundHighlightedImage:[UIImage imageNamed:@"profile-bounce"]];
+//    
+//    DCPathItemButton *itemButton_2 = [[DCPathItemButton alloc]initWithImage:[UIImage imageNamed:@"takephoto-bounce"]
+//                                                           highlightedImage:[UIImage imageNamed:@"takephoto-bounce"]
+//                                                            backgroundImage:[UIImage imageNamed:@"takephoto-bounce"]
+//                                                 backgroundHighlightedImage:[UIImage imageNamed:@"takephoto-bounce"]];
+//    
+//    [_centerButton addPathItems:@[itemButton_1,itemButton_2]];
+//    _centerButton.delegate = self;
     
-    DCPathItemButton *itemButton_2 = [[DCPathItemButton alloc]initWithImage:[UIImage imageNamed:@"takephoto-bounce"]
-                                                           highlightedImage:[UIImage imageNamed:@"takephoto-bounce"]
-                                                            backgroundImage:[UIImage imageNamed:@"takephoto-bounce"]
-                                                 backgroundHighlightedImage:[UIImage imageNamed:@"takephoto-bounce"]];
+//    [self.view addSubview:_centerButton];
     
-    [_centerButton addPathItems:@[itemButton_1,itemButton_2]];
-    _centerButton.delegate = self;
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width;
+    UIImage *img = [UIImage imageNamed:@"compose-icon"];
+    [_btnTakePhoto setImage:img forState:UIControlStateNormal];
+    [_btnTakePhoto setImage:img forState:UIControlStateHighlighted];
+    [_btnTakePhoto setImage:img forState:UIControlStateSelected];
+    CGRect frame = CGRectMake((screenWidth-img.size.width)/2, _btnTakePhoto.frame.origin.y, img.size.width, _btnTakePhoto.frame.size.height);
+    [_btnTakePhoto setFrame:frame];
+    _btnTakePhoto.hidden = NO;
+
     
-    [self.view addSubview:_centerButton];
+    _imagePickerController = [[UIImagePickerController alloc]init];
+    _imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    _imagePickerController.delegate = self;
     
 }
 
@@ -215,16 +228,17 @@
     if (_textView.text.length == 0) {
         [appDelegate.window makeToast:PleaseTypeMessage backgroundColor:[UIColor redColor]];
     } else {
-        _textView.hidden = YES;
-        [self.cameraView startShowingPreview];
+//        _textView.hidden = YES;
+//        [self.cameraView startShowingPreview];
     }
 }
 
 -(IBAction)takePicture:(id)sender {
     [self.view endEditing:YES];
-    if (_textView.text.length > 0) {
-        [self.cameraView takePicture];
-    }
+//    if (_textView.text.length > 0) {
+//        [self.cameraView takePicture];
+//    }
+    [self presentViewController:self.imagePickerController animated:YES completion:nil];
 }
 
 -(IBAction)onClickDelete:(id)sender {
@@ -258,6 +272,31 @@
     }
 }
 
+#pragma mark - Image Picker Controller Delegate
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    UIImage *originImage = info[UIImagePickerControllerOriginalImage];
+    
+    // I copy this code from the origin method above
+    //
+    [appDelegate showLoading];
+    self.view.userInteractionEnabled = NO;
+    if (_isReplyMode) {
+        [self replyMessageWithImage:originImage];
+    } else {
+        [self sendMessageWithImage:originImage];
+    }
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
+
 #pragma mark -
 #pragma mark VLBCameraView
 
@@ -288,6 +327,7 @@
 
 -(void)sendMessageWithImage:(UIImage *)image {
     
+    self.currentDP.image = image;
     NSDictionary *profileDict = [[NSUserDefaults standardUserDefaults] objectForKey:UserProfile];
     NSString *uuid = profileDict[@"uuid"];
     CGFloat width = image.size.width;

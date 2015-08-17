@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DCPathButton.h"
 
-@interface TCHMessageComposeVC : UIViewController<DCPathButtonDelegate>
+@interface TCHMessageComposeVC : UIViewController<DCPathButtonDelegate, UIImagePickerControllerDelegate>
 
 @property (nonatomic, assign) NSString *receiver;
 @property (nonatomic, assign) NSString *messageId;
