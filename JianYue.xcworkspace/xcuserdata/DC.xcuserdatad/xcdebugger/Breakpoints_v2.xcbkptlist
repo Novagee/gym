@@ -25,7 +25,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "112"
             endingLineNumber = "112"
-            landmarkName = "-pathButton:clickItemButtonAtIndex:"
+            landmarkName = "-showTutorial"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -57,7 +57,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "118"
             endingLineNumber = "118"
-            landmarkName = "-pathButton:clickItemButtonAtIndex:"
+            landmarkName = "-showTutorial"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -166,7 +166,7 @@
 
 -(IBAction)onClickHome:(id)sender {
     TCHMainViewController *viewController = (TCHMainViewController *)[self rootViewController];
-    [viewController setCurrentPage:kGirlsListingView];
+    [viewController setCurrentPage:kMessageList];
 }
 
 #pragma mark -

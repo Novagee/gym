@@ -218,7 +218,7 @@
 
 -(IBAction)onClickMessage:(id)sender {
     TCHMainViewController *viewController = (TCHMainViewController *)[self rootViewController];
-    [viewController setCurrentPage:kMessageList];
+    [viewController setCurrentPage:1];
 }
 
 -(IBAction)onClickProfile:(id)sender {
