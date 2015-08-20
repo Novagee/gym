@@ -7,46 +7,34 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>272AC15E-B7AA-4565-9B60-D7C9A4D09D4E</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Impp</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>41932CD03C33BC3B2624762135296BABE420F02A</key>
-		<string>code.csdn.net:arrownock/arrownock-impp-ios.git</string>
-		<key>51DC890C0E892719D981357E4B06BE7313538E3A</key>
-		<string>git.arrownock.com:arrownock/arrownock-impp-ios.git</string>
+		<key>F02C50662255F45A41F2D5CFC8B66DBA30522231</key>
+		<string>https://github.com/Novagee/gym</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Impp.xcodeproj</string>
+	<string>Impp.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>41932CD03C33BC3B2624762135296BABE420F02A</key>
+		<key>F02C50662255F45A41F2D5CFC8B66DBA30522231</key>
 		<string>../..</string>
-		<key>51DC890C0E892719D981357E4B06BE7313538E3A</key>
-		<string>../../../arrownock-impp-ios</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>code.csdn.net:arrownock/arrownock-impp-ios.git</string>
+	<string>https://github.com/Novagee/gym</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>41932CD03C33BC3B2624762135296BABE420F02A</string>
+	<string>F02C50662255F45A41F2D5CFC8B66DBA30522231</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>51DC890C0E892719D981357E4B06BE7313538E3A</string>
+			<string>F02C50662255F45A41F2D5CFC8B66DBA30522231</string>
 			<key>IDESourceControlWCCName</key>
-			<string>arrownock-impp-ios</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>41932CD03C33BC3B2624762135296BABE420F02A</string>
-			<key>IDESourceControlWCCName</key>
-			<string>arrownock-impp-ios-code</string>
+			<string>gym</string>
 		</dict>
 	</array>
 </dict>
